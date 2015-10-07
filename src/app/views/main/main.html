@@ -1,0 +1,46 @@
+<div class="row" style="padding: 4px">
+  <div class="col-lg-2">
+    Findoo
+  </div>
+  <div class="col-lg-3">
+    <input type="text">
+  </div>
+</div>
+<ul class="nav nav-tabs">
+  <li active-state="search.apps"      ui-sref="search.apps.list"      class="active"><a>Apps</a></li>
+  <li active-state="search.events"    ui-sref="search.events.list"    class="active"><a>Events</a></li>
+  <li active-state="search.jobs"      ui-sref="search.jobs.list"      class="active"><a>Jobs</a></li>
+  <li active-state="search.posts"     ui-sref="search.posts.list"     class="active"><a>Posts</a></li>
+  <li active-state="search.products"  ui-sref="search.products.list"  class="active"><a>Products</a></li>
+  <li active-state="search.profiles"  ui-sref="search.profiles.list"  class="active"><a>Profiles</a></li>
+  <li active-state="search.resources" ui-sref="search.resources.list" class="active"><a>Resources</a></li>
+  <li active-state="search.services"  ui-sref="search.services.list"  class="active"><a>Services</a></li>
+</ul>
+
+<div class="row" style="padding: 8px;">
+  <div class="col-lg-2">
+    Sidebar
+  </div>
+  <div class="col-lg-10">
+    <div class="row" style="background-color:grey ">
+      <div class="col-md-2 btn-group" dropdown is-open="isopen">
+        <button type="button" class="btn btn-primary" dropdown-toggle ng-disabled="disabled">
+          Sort By <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+          <li><a>Action</a></li>
+          <li><a>Another action</a></li>
+          <li><a>Something else here</a></li>
+          <li><a>Separated link</a></li>
+        </ul>
+      </div>
+      <div class="col-md-10 text-right">
+        <button ng-click="mainMdl.gotTo('list')" class="btn btn-link glyphicon glyphicon-th-list"></button>
+        <button ng-click="mainMdl.gotTo('map')" class="btn btn-link glyphicon glyphicon-map-marker"></button>
+        <button ng-click="mainMdl.gotTo('detail')" class="btn btn-link">Detail</button>
+      </div>
+    </div>
+    <ui-view></ui-view>
+  </div>
+</div>
+
