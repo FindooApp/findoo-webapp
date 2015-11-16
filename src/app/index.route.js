@@ -12,6 +12,10 @@
         url: '/',
         templateUrl: 'app/views/home/home.html'
       })
+      .state('account', {
+        url: '/account',
+        templateUrl: 'app/views/account/account.html'
+      })
       .state('search', {
         url: '/search',
         templateUrl: 'app/views/main/main.html',
