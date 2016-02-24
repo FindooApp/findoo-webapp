@@ -10,11 +10,17 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'app/views/home/home.html'
+        templateUrl: 'app/views/home/home.html',
+        data : {
+           cssClassnames : 'body-image'
+       }
       })
       .state('account', {
         url: '/account',
-        templateUrl: 'app/views/account/account.html'
+        templateUrl: 'app/views/account/account.html',
+        data : {
+           cssClassnames : 'body-image'
+       }
       })
       .state('search', {
         url: '/search',
@@ -37,6 +43,40 @@
         url:'/detail',
         templateUrl: 'app/views/main/apps/detail/detail.html'
       })
+      
+      .state('search.activities',{
+        url:'/activities',
+        templateUrl: 'app/views/main/activities/activities.html'
+      }).state('search.activities.list',{
+        url:'/list',
+        templateUrl: 'app/views/main/activities/list/list.html'
+      })
+      .state('search.activities.map',{
+        url:'/activities',
+        templateUrl: 'app/views/main/activities/map/map.html'
+      })
+      .state('search.activities.detail',{
+        url:'/detail',
+        templateUrl: 'app/views/main/activities/detail/detail.html'
+      })
+      
+      .state('search.catalog',{
+        url:'/catalog',
+        templateUrl: 'app/views/main/catalog/catalog.html'
+      }).state('search.catalog.list',{
+        url:'/list',
+        templateUrl: 'app/views/main/catalog/list/list.html'
+      })
+      .state('search.catalog.map',{
+        url:'/catalog',
+        templateUrl: 'app/views/main/catalog/map/map.html'
+      })
+      .state('search.catalog.detail',{
+        url:'/detail',
+        templateUrl: 'app/views/main/catalog/detail/detail.html'
+      })
+    
+    
       .state('search.events',{
         url:'/events',
         templateUrl: 'app/views/main/events/events.html'
@@ -112,6 +152,10 @@
         url:'/detail',
         templateUrl: 'app/views/main/profiles/detail/detail.html'
       })
+      .state('search.profiles.user',{
+        url:'/user',
+        templateUrl: 'app/views/main/profiles/user/user.html'
+      })
       .state('search.resources',{
         url:'/resources',
         templateUrl: 'app/views/main/resources/resources.html'
@@ -147,7 +191,7 @@
 
 
 
-    $urlRouterProvider.otherwise('/search');
+    $urlRouterProvider.otherwise('/');
   }
 
 })();

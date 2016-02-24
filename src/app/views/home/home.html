@@ -27,8 +27,8 @@
         <div class="text-center search-window">
           <h1 class="logo"><span>Findoo</span></h1>
           <div class="input-group search-section">
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile <span class="glyphicon glyphicon-menu-down"></span></button>
+              <div class="input-group-btn" dropdown is-open="isopen">
+                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">Profile <span class="glyphicon glyphicon-menu-down"></span></button>
                 <ul class="dropdown-menu">
                   <li><a href="#">Action</a></li>
                   <li><a href="#">Another action</a></li>

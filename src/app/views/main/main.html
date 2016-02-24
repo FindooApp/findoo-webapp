@@ -1,46 +1,489 @@
-<div class="row" style="padding: 4px">
-  <div class="col-lg-2">
-    Findoo
-  </div>
-  <div class="col-lg-3">
-    <input type="text">
-  </div>
+<div class="row header-sec">
+    <div class="col-lg-6 col-md-6 search-sec-top">
+        <h1 class="logo-main"><span>Findoo</span></h1>
+        <span aria-hidden="true" class="glyphicon glyphicon-th" style="float:left;"></span>
+        <div class="input-group" style="float:left; width:80%;">
+          <input type="text" class="form-control" placeholder="Search for...">
+          <span class="input-group-btn">
+            <button class="btn btn-default btn-primary" type="button">Search</button>
+          </span>
+        </div><!-- /input-group -->
+    </div>
+    <div class="col-lg-4 col-lg-offset-2 col-md-4 col-md-offset-2 header-right-sec">
+        <ul class="header-right clearfix">
+            <li>
+                <a href="#" class="icon-alert">
+                    <span class="count">2</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="icon-message">
+                    <span class="count">2</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="icon-group">
+                    <span class="count">2</span>
+                </a>
+            </li>
+            <li class="user-info">
+                <span class="user-profile-pic"></span>
+                <div class="btn-group" dropdown is-open="isopen">
+                    <button type="button" class="btn btn-user-info" dropdown-toggle ng-disabled="disabled">
+                      John Doe <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+                      <li><a>Action</a></li>
+                      <li><a>Another action</a></li>
+                      <li><a>Something else here</a></li>
+                      <li><a>Separated link</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></li>
+            </div>
+            
+        </ul>
+    </div>
 </div>
-<ul class="nav nav-tabs">
-  <li active-state="search.apps"      ui-sref="search.apps.list"      class="active"><a>Apps</a></li>
-  <li active-state="search.events"    ui-sref="search.events.list"    class="active"><a>Events</a></li>
-  <li active-state="search.jobs"      ui-sref="search.jobs.list"      class="active"><a>Jobs</a></li>
-  <li active-state="search.posts"     ui-sref="search.posts.list"     class="active"><a>Posts</a></li>
-  <li active-state="search.products"  ui-sref="search.products.list"  class="active"><a>Products</a></li>
-  <li active-state="search.profiles"  ui-sref="search.profiles.list"  class="active"><a>Profiles</a></li>
-  <li active-state="search.resources" ui-sref="search.resources.list" class="active"><a>Resources</a></li>
-  <li active-state="search.services"  ui-sref="search.services.list"  class="active"><a>Services</a></li>
+
+<ul class="nav nav-tabs main-nav">
+    <li class="body-nav"><button type="button" ng-click="showNav=!showNav" class="btn" data-animation="am-slide-left" data-placement="left" bs-aside="aside"><span class="fa fa-bars"></span></button></li>
+    <li active-state="search.activities"      ui-sref="search.activities.list"      class="active"><a>Home</a></li>
+    <li active-state="search.profiles"  ui-sref="search.profiles.list"  class="active"><a>Profiles</a></li>
+    <li active-state="search.products"  ui-sref="search.products.list"  class="active" ><a>Products</a></li>
+    <li active-state="search.services"  ui-sref="search.services.list"  class="active"><a>Services</a></li>
+    <li active-state="search.posts"     ui-sref="search.posts.list"     class="active"><a>Posts</a></li>
+    <li active-state="search.resources" ui-sref="search.resources.list" class="active"><a>Resources</a></li>
+    <li active-state="search.events"    ui-sref="search.events.list"      class="active"><a>Events</a></li>
+    <li active-state="search.jobs"      ui-sref="search.jobs.list"      class="active"><a>Jobs</a></li>
+    <li active-state="search.apps"  ui-sref="search.apps.list"  class="active"><a>Apps</a></li>
 </ul>
 
-<div class="row" style="padding: 8px;">
-  <div class="col-lg-2">
-    Sidebar
-  </div>
-  <div class="col-lg-10">
-    <div class="row" style="background-color:grey ">
-      <div class="col-md-2 btn-group" dropdown is-open="isopen">
-        <button type="button" class="btn btn-primary" dropdown-toggle ng-disabled="disabled">
-          Sort By <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
-          <li><a>Action</a></li>
-          <li><a>Another action</a></li>
-          <li><a>Something else here</a></li>
-          <li><a>Separated link</a></li>
-        </ul>
-      </div>
-      <div class="col-md-10 text-right">
-        <button ng-click="mainMdl.gotTo('list')" class="btn btn-link glyphicon glyphicon-th-list"></button>
-        <button ng-click="mainMdl.gotTo('map')" class="btn btn-link glyphicon glyphicon-map-marker"></button>
-        <button ng-click="mainMdl.gotTo('detail')" class="btn btn-link">Detail</button>
+<div class="row main-wrapper">
+    <div class="col-lg-2 col-md-2 left-panel animated" ng-class="{fadeInLeft: showNav, fadeOutLeft: !showNav}">
+        <div class="side-column">
+            <div class="nav-section">
+                <div class="side-nav-title">
+                    <h3>Account</h3>
+                </div>
+                <ul>
+                    <li class="active"><a href="#">User</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Entity</a></li>
+                    <li><a href="#">Extention</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="side-column">
+            <div class="nav-section">
+                <div class="side-nav-title">
+                    <h3>Settings</h3>
+                </div>
+                <ul>
+                    <li><a href="#">General</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Notification</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-7 col-md-7">
+      <div class="row">
+        <ui-view></ui-view>
       </div>
     </div>
-    <ui-view></ui-view>
-  </div>
+    <div class="col-lg-3 col-md-3">
+        <div class="side-column box-white">
+            <div class="nav-section">
+                <div class="side-nav-title">
+                    <h3>My Account</h3>
+                </div>    
+                <ul>
+                    <li><a href="#">Username</a> <span class="glyphicon glyphicon-edit"></span> <span class="glyphicon glyphicon-cog" aria-hidden="true"></span></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>Profile Name (Consumer)</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Entity Name 1 (Consumer)</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Entity Name 2 (Intermediary)</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Entity Name 3 (Principal)</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Entity Name 4 (Regulator)</a></li>
+                </ul>
+                <button class="btn btn-default btn-primary align">Create Entity</button>
+            </div>
+        </div>
+        
+        <div class="side-column box-white">
+            <div class="nav-section">
+                <div class="side-nav-title">
+                        <h3>Activities</h3>
+                        <div class="dropdown" dropdown is-open="isopen">
+                            <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">Period <span class="glyphicon glyphicon-menu-down"></span></button>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Action</a></li>
+                              <li><a href="#">Another action</a></li>
+                              <li><a href="#">Something else here</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                <div class="tab-section">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </a>
+                    </li>
+                </ul>
+
+              <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div role="tabpanel" class="tab-pane active login" id="home">
+                        <ul>
+                            <li>
+                                <span class="fa fa-newspaper-o"></span>
+                                <a href="#">Post</a> 
+                                <span>(58)</span>   
+                            </li>
+                            <li>
+                                <span class="fa fa-eye"></span>
+                                <a href="#">Views</a> 
+                                <span>(58)</span>   
+                            </li>
+                            <li>
+                                <span class="fa fa-thumbs-o-up"></span>
+                                <a href="#">Wows</a> 
+                                <span>(58)</span>   
+                            </li>
+                            <li>
+                                <span class="fa fa-hand-o-up"></span>
+                                <a href="#">Says</a> 
+                                <span>(58)</span>   
+                            </li>
+                            <li>
+                                <span class="fa fa-hand-o-right"></span>
+                                <a href="#">Refers</a> 
+                                <span>(58)</span>   
+                            </li>
+                            <li>
+                                <span class="glyphicon glyphicon-star"></span>
+                                <a href="#">Reviews</a> 
+                                <span>(58)</span>   
+                            </li>
+                            <li>
+                                <span class="glyphicon glyphicon-thumbs-up"></span>
+                                <a href="#">Praises</a> 
+                                <span>(58)</span>   
+                            </li>
+                            <li>
+                                <span class="glyphicon glyphicon-plane"></span>
+                                <a href="#">Tracks</a> 
+                                <span>(58)</span>   
+                            </li>
+                            <li>
+                                <span class="glyphicon glyphicon-leaf"></span>
+                                <a href="#">Heaps</a> 
+                                <span>(58)</span>   
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        
+        <div class="side-column box-white">
+            <div class="nav-section">
+                <div class="side-nav-title">
+                    <h3>Reach</h3>
+                    <div class="dropdown" dropdown is-open="isopen">
+                        <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">Period <span class="glyphicon glyphicon-menu-down"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="#">Role</a></li>
+                    <li><a href="#">Index</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-chevron-left"></span> Tracker(589)</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span> Tracking(896)</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Contact(10252)</a></li>
+                </ul>
+                <button class="btn btn-default btn-primary align">Create Entity</button>
+            </div>
+        </div>
+        
+        <div class="side-column box-white">
+            <div class="nav-section">
+                <div class="side-nav-title">
+                    <h3>Crate</h3>
+                </div>
+                <div class="tab-section">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            Recent
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            Popular
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            Rating
+                        </a>
+                    </li>
+                    
+                </ul>
+
+              <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div role="tabpanel" class="tab-pane active login" id="home">
+                        <ul>
+                            <li class="tab-content-row">
+                                <div class="row-image">
+                                    <img src="http://placehold.it/50x50" alt="placeholder">
+                                </div>
+                                <div class="row-info">
+                                    <h4>Product 1</h4>
+                                    <div class="rating">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </div>
+                                    <ul class="">
+                                        <li><span class="glyphicon glyphicon-eye-open"></span> 357</li>
+                                        <li><span class="glyphicon glyphicon-thumbs-up"></span> 87</li>
+                                        <li><span class="glyphicon glyphicon-hand-right"></span> 57</li>
+                                    </ul>
+                                </div>  
+                            </li>
+                            <li class="tab-content-row">
+                                <div class="row-image">
+                                    <img src="http://placehold.it/50x50" alt="placeholder">
+                                </div>
+                                <div class="row-info">
+                                    <h4>Product 1</h4>
+                                    <div class="rating">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </div>
+                                    <ul class="">
+                                        <li><span class="glyphicon glyphicon-eye-open"></span> 357</li>
+                                        <li><span class="glyphicon glyphicon-thumbs-up"></span> 87</li>
+                                        <li><span class="glyphicon glyphicon-hand-right"></span> 57</li>
+                                    </ul>
+                                </div>  
+                            </li>
+                            <li class="tab-content-row">
+                                <div class="row-image">
+                                    <img src="http://placehold.it/50x50" alt="placeholder">
+                                </div>
+                                <div class="row-info">
+                                    <h4>Product 1</h4>
+                                    <div class="rating">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </div>
+                                    <ul class="">
+                                        <li><span class="glyphicon glyphicon-eye-open"></span> 357</li>
+                                        <li><span class="glyphicon glyphicon-thumbs-up"></span> 87</li>
+                                        <li><span class="glyphicon glyphicon-hand-right"></span> 57</li>
+                                    </ul>
+                                </div>  
+                            </li>
+                            <li class="tab-content-row">
+                                <div class="row-image">
+                                    <img src="http://placehold.it/50x50" alt="placeholder">
+                                </div>
+                                <div class="row-info">
+                                    <h4>Product 1</h4>
+                                    <div class="rating">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </div>
+                                    <ul class="">
+                                        <li><span class="glyphicon glyphicon-eye-open"></span> 357</li>
+                                        <li><span class="glyphicon glyphicon-thumbs-up"></span> 87</li>
+                                        <li><span class="glyphicon glyphicon-hand-right"></span> 57</li>
+                                    </ul>
+                                </div>  
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+        
+        <div class="side-column box-white">
+            <div class="nav-section">
+                <div class="side-nav-title">
+                    <h3>Heap</h3>
+                </div>
+                <div class="tab-section">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            Public
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            Profile
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                            Crate
+                        </a>
+                    </li>
+                    
+                </ul>
+
+              <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div role="tabpanel" class="tab-pane active login" id="home">
+                        <ul>
+                            <li class="tab-content-row">
+                                <div class="row-image">
+                                    <img src="http://placehold.it/50x50" alt="placeholder">
+                                </div>
+                                <div class="row-info">
+                                    <h4>Product 1</h4>
+                                    <div class="rating">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </div>
+                                    <ul class="">
+                                        <li><span class="glyphicon glyphicon-eye-open"></span> 357</li>
+                                        <li><span class="glyphicon glyphicon-thumbs-up"></span> 87</li>
+                                        <li><span class="glyphicon glyphicon-hand-right"></span> 57</li>
+                                    </ul>
+                                </div>  
+                            </li>
+                            <li class="tab-content-row">
+                                <div class="row-image">
+                                    <img src="http://placehold.it/50x50" alt="placeholder">
+                                </div>
+                                <div class="row-info">
+                                    <h4>Product 1</h4>
+                                    <div class="rating">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </div>
+                                    <ul class="">
+                                        <li><span class="glyphicon glyphicon-eye-open"></span> 357</li>
+                                        <li><span class="glyphicon glyphicon-thumbs-up"></span> 87</li>
+                                        <li><span class="glyphicon glyphicon-hand-right"></span> 57</li>
+                                    </ul>
+                                </div>  
+                            </li>
+                            <li class="tab-content-row">
+                                <div class="row-image">
+                                    <img src="http://placehold.it/50x50" alt="placeholder">
+                                </div>
+                                <div class="row-info">
+                                    <h4>Product 1</h4>
+                                    <div class="rating">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </div>
+                                    <ul class="">
+                                        <li><span class="glyphicon glyphicon-eye-open"></span> 357</li>
+                                        <li><span class="glyphicon glyphicon-thumbs-up"></span> 87</li>
+                                        <li><span class="glyphicon glyphicon-hand-right"></span> 57</li>
+                                    </ul>
+                                </div>  
+                            </li>
+                            <li class="tab-content-row">
+                                <div class="row-image">
+                                    <img src="http://placehold.it/50x50" alt="placeholder">
+                                </div>
+                                <div class="row-info">
+                                    <h4>Product 1</h4>
+                                    <div class="rating">
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                        <span class="glyphicon glyphicon-star-empty"></span>
+                                    </div>
+                                    <ul class="">
+                                        <li><span class="glyphicon glyphicon-eye-open"></span> 357</li>
+                                        <li><span class="glyphicon glyphicon-thumbs-up"></span> 87</li>
+                                        <li><span class="glyphicon glyphicon-hand-right"></span> 57</li>
+                                    </ul>
+                                </div>  
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+        </div>
+    </div>
 </div>
 
