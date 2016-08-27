@@ -43,7 +43,6 @@
         url:'/detail',
         templateUrl: 'app/views/main/apps/detail/detail.html'
       })
-      
       .state('search.activities',{
         url:'/activities',
         templateUrl: 'app/views/main/activities/activities.html'
@@ -155,6 +154,18 @@
       .state('search.profiles.user',{
         url:'/user',
         templateUrl: 'app/views/main/profiles/user/user.html'
+      })
+      .state('search.profiles.entity',{
+        url:'/entity',
+        templateUrl: 'app/views/main/entity/entity.html'
+      })
+      .state('search.profiles.extention',{
+        url:'/extention',
+        templateUrl: 'app/views/main/extention/extention.html'
+      })
+      .state('search.profiles.settings',{
+        url:'/settings',
+        templateUrl: 'app/views/main/settings/settings.html'
       })
       .state('search.resources',{
         url:'/resources',
