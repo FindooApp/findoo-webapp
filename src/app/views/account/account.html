@@ -1,54 +1,32 @@
-<!--Search Section -->
+<div class="row account-row">
+    <!-- Login and sigup Section Starts -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="text-center account-window">
-            <h1 class="logo"><span>Findoo</span></h1>
+            <h1 class="logo" ui-sref="home"><span>Findoo</span></h1>
             <h2>Single Account for all of Findoo</h2>
             <p>Now, experience social approach in finance! You are signing in to Search</p>
-            
-            <div class="tab-section">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Login</a></li>
-                    <li role="presentation"><a href="#register" aria-controls="profile" role="tab" data-toggle="tab">Register</a></li>
+            <div class="tab-section" ng-init="tab = 1">
+                <ul class="nav nav-tabs account-tabs" role="tablist">
+                    <li role="presentation" ng-class="{'active': tab == 1}"><a href="" ng-click="tab = 1" aria-controls="home" role="tab" data-toggle="tab">Sign In</a></li>
+                    <li role="presentation" ng-class="{'active': tab == 2}"><a href="" ng-click="tab = 2" aria-controls="profile" role="tab" data-toggle="tab">Register</a></li>
                 </ul>
-
-              <!-- Tab panes -->
+                <!-- Tab panes -->
                 <div class="tab-content clearfix">
-                    <div role="tabpanel" class="tab-pane active login" id="login">
+                    <div role="tabpanel" class="tab-pane login" id="login" ng-class="{'active': tab == 1}" ng-show="tab == 1">
                         <form>
                             <h3 class="pull-left">Welcome Back!</h3>
                             <a href="#" class="pull-right">Need Help?</a>
                             <span class="clearfix"></span>
                             <input type="text" placeholder="Mobile, email or username" class="form-control">
                             <input type="password" placeholder="password" class="form-control">
-                            <label class="pul-left"><input type="checkbox">Remember Me</label>
+                            <label class="pul-left">
+                                <input type="checkbox">Remember Me</label>
                             <a href="#" class="pull-right">Forgot password?</a>
                             <span class="clearfix"></span>
                             <button type="submit" class="btn btn-default btn-submit">Submit</button>
                         </form>
-                        <hr/>
-                        <ul class="social-id clearfix">
-                            <li>
-                                <span class="social-icon"></span>
-                                <h4>Google</h4>
-                            </li>
-                            <li>
-                                <span class="social-icon"></span>
-                                <h4>Facebook</h4>
-                            </li>
-                            <li>
-                                <span class="social-icon"></span>
-                                <h4>Twitter</h4>
-                            </li>
-                            <li>
-                                <span class="social-icon"></span>
-                                <h4>Linkedin</h4>
-                            </li>
-                            <li>
-                                <span class="social-icon"></span>
-                                <h4>Aadhar</h4>
-                            </li>
-                        </ul>
                     </div>
-                    <div role="tabpanel" class="tab-pane register" id="register">
+                    <div role="tabpanel" class="tab-pane register" id="register" ng-class="{'active': tab == 2}" ng-show="tab == 2">
                         <form class="form-horizontal">
                             <h3 class="pull-left">Get Started - it’s free</h3>
                             <a href="#" class="pull-right">Need Help?</a>
@@ -63,97 +41,81 @@
                                     <input type="password" class="form-control" id="" placeholder="Last Name">
                                 </div>
                             </div>
-                            
-                            <input type="text" placeholder="Username" class="form-control">
+                            <input type="text" placeholder="Username" class="form-control" style="margin-right: 7px;">
                             <input type="email" class="form-control" id="" placeholder="email">
-                            
-                            <input type="password" placeholder="password" class="form-control">
+                            <input type="password" placeholder="password" class="form-control" style="margin-right: 7px;">
                             <input type="password" placeholder="confirm password" class="form-control">
                             <p class="text-center">By <a href="#">Signing up</a>, you agree to findoo’s <a href="#">terms and conditions</a></p>
                             <button type="submit" class="btn btn-default btn-submit">Submit</button>
                         </form>
-                        <hr/>
-                        <ul class="social-id clearfix">
-                            <li>
-                                <span class="social-icon"></span>
-                                <h4>Google</h4>
-                            </li>
-                            <li>
-                                <span class="social-icon"></span>
-                                <h4>Facebook</h4>
-                            </li>
-                            <li>
-                                <span class="social-icon"></span>
-                                <h4>Twitter</h4>
-                            </li>
-                            <li>
-                                <span class="social-icon"></span>
-                                <h4>Linkedin</h4>
-                            </li>
-                            <li>
-                                <span class="social-icon"></span>
-                                <h4>Aadhar</h4>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-                
             </div>
         </div>
-        <div class="row help-section">
-            <h3>This module will help you to...</h3>
-            <div class="col-md-2 col-md-offset-1">
-                <span class="help-icon"></span>
-                <h4>Search</h4>
-                <p>Search profiles of participants in finance industry</p>
-            </div>
-            <div class="col-md-2">
-                <span class="help-icon"></span>
-                <h4>Account</h4>
-                <p>Search variety of finance products that suits your needs</p>
-            </div>
-            <div class="col-md-2">
-                <span class="help-icon"></span>
-                <h4>Community</h4>
-                <p>Search various free or paid financial services near you with reviews</p>
-            </div>
-            <div class="col-md-2">
-                <span class="help-icon"></span>
-                <h4>Messages</h4>
-                <p>Search diffferent types of finance related posts from many experts</p>
-            </div>
-            <div class="col-md-2">
-                <span class="help-icon"></span>
-                <h4>Posts</h4>
-                <p>Search respective resources of finance from our public repository</p>
-            </div>
+    </div>
+    <!-- Login and sigup Section Ends -->
+    <!-- Help Section Starts -->
+    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 help-section">
+        <h3>This module will help you to...</h3>
+        <div class="col-md-2 col-md-offset-1">
+            <span class="help-icon"></span>
+            <h4>Search</h4>
+            <p>Search profiles of participants in finance industry</p>
         </div>
-            
-    
-
-<!--Search Section end-->
-
-<!--footer Section -->
-<div class="footer navbar-fixed-bottom">
-    <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-2">
+            <span class="help-icon"></span>
+            <h4>Account</h4>
+            <p>Search variety of finance products that suits your needs</p>
+        </div>
+        <div class="col-md-2">
+            <span class="help-icon"></span>
+            <h4>Community</h4>
+            <p>Search various free or paid financial services near you with reviews</p>
+        </div>
+        <div class="col-md-2">
+            <span class="help-icon"></span>
+            <h4>Messages</h4>
+            <p>Search diffferent types of finance related posts from many experts</p>
+        </div>
+        <div class="col-md-2">
+            <span class="help-icon"></span>
+            <h4>Posts</h4>
+            <p>Search respective resources of finance from our public repository</p>
+        </div>
+    </div> -->
+    <!-- Help Section Ends -->
+    <!--footer Section -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer navbar-fixed-bottom">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding">
             <ul class="nav nav-pills">
-              <li role="presentation"><a href="#">About</a></li>
-              <li role="presentation"><a href="#">Business</a></li>
-              <li role="presentation"><a href="#">Advertise</a></li>
+                <li role="presentation"><a href="#">About</a></li>
+                <li role="presentation"><a href="#">Business</a></li>
+                <li role="presentation"><a href="#">Advertise</a></li>
             </ul>
         </div>
-        <div class="col-md-6 text-center copy">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center copy no-padding">
             <span>&copy; 2015 Findoo</span>
         </div>
-        <div class="col-md-3">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding">
             <ul class="nav nav-pills nav-right">
-              <li role="presentation"><a href="#">Support</a></li>
-              <li role="presentation"><a href="#">Privacy</a></li>
-              <li role="presentation"><a href="#">Terms</a></li>
+                <li role="presentation"><a href="#">Support</a></li>
+                <li role="presentation"><a href="#">Privacy</a></li>
+                <li role="presentation"><a href="#">Terms</a></li>
             </ul>
         </div>
     </div>
+    <!-- Footer Section Ends -->
 </div>
-
-<!--Search Section End-->
+<!-- Window height -->
+<script>
+$(document).ready(function() {
+    function setHeight() {
+        windowHeight = $(window).innerHeight();
+        $('.account-row').css('min-height', windowHeight);
+    };
+    setHeight();
+    $(window).resize(function() {
+        setHeight();
+    });
+});
+</script>

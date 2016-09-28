@@ -1,1 +1,308 @@
-<ui-view></ui-view>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-products-col no-padding">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding search-found">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <p>Found 23k results in 0.46 minutes</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
+            <a href="" ng-click="showAdvanceSearch = !showAdvanceSearch">Search Advance?</a> &nbsp;
+            <a href="">Browse Catalog?</a>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail-col">
+        <div class="image-div col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <div>
+            </div>
+            <p class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i> &nbsp;
+                <span>4.65/255</span>
+            </p>
+        </div>
+        <div class="text-div col-lg-9 col-md-9 col-sm-8 col-xs-12">
+            <a href="" class="product-name">I will do complete financial problem for you or your family in magic 10 days</a>
+            <p class="by"><span>by</span> <a href="">HDFC Mutual Fund</a></p>
+            <p class="pockets"><a href="">Pocket 1</a>&nbsp; <a href="">Pocket 2</a>&nbsp; <a href="">Pocket 3</a>&nbsp; <a href="">Pocket 4</a>&nbsp; <a href="">Pocket 5</a></p>
+            <p class="more"><a href="">more...</a></p>
+            <p class="location"><i class="fa fa-map-marker"></i>&nbsp; Area, City, State, Country</p>
+            <!-- <p class="risk-rating"><i class="fa fa-tachometer"></i>&nbsp; Moderate Risk &nbsp; <i class="fa fa-star"></i>&nbsp; 5 Star Rating</p> -->
+            <div class="action-btns">
+                <button class="btn">Track</button>
+                <button class="btn">Engage</button>
+                <button class="btn">Message</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-detail-col video-col">
+        <img src="http://placehold.it/755x350" class="img-responsive full-width">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+            <a href=""><i class="fa fa-eye"></i> &nbsp; View (265)</a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+            <a href=""><i class="fa fa-thumbs-up"></i> &nbsp; Wow (5k)</a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+            <a href=""><i class="fa fa-hand-o-right"></i> &nbsp; Refer (25)</a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+            <a href=""><i class="fa fa-star-o"></i> &nbsp; Review (65)</a>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-home-col" ng-show="showAdvanceSearch" style="margin-bottom: 20px;">
+    	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding slider-col">
+    		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab">
+			    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-advance advance-search-col no-padding" ng-class="{'show-advance': showAdvanceSearch}">
+			        <h4>Advance Search</h4>
+			        <form class="form-horizontal">
+			            <div class="form-group">
+			                <label class="col-sm-2 control-label">Item</label>
+			                <div class="col-sm-10">
+			                    <select class="form-control">
+			                        <option>Lorem Ipsum</option>
+			                        <option>Lorem Ipsum</option>
+			                        <option>Lorem Ipsum</option>
+			                    </select>
+			                </div>
+			            </div>
+			            <div class="form-group">
+			                <label class="col-sm-2 control-label">Type</label>
+			                <div class="col-sm-10">
+			                    <select class="form-control">
+			                        <option>Lorem Ipsum</option>
+			                        <option>Lorem Ipsum</option>
+			                        <option>Lorem Ipsum</option>
+			                    </select>
+			                </div>
+			            </div>
+			            <div class="form-group">
+			                <label class="col-sm-2 control-label">Category</label>
+			                <div class="col-sm-10">
+			                    <select class="form-control">
+			                        <option>Lorem Ipsum</option>
+			                        <option>Lorem Ipsum</option>
+			                        <option>Lorem Ipsum</option>
+			                    </select>
+			                </div>
+			            </div>
+			            <div class="form-group">
+			                <label class="col-sm-2 control-label">Location</label>
+			                <div class="col-sm-3">
+			                    <select class="form-control">
+			                        <option>Country</option>
+			                        <option>Lorem Ipsum</option>
+			                        <option>Lorem Ipsum</option>
+			                    </select>
+			                </div>
+			                <div class="col-sm-3 no-padding">
+			                    <select class="form-control">
+			                        <option>State</option>
+			                        <option>Lorem Ipsum</option>
+			                        <option>Lorem Ipsum</option>
+			                    </select>
+			                </div>
+			                <div class="col-sm-4">
+			                    <select class="form-control">
+			                        <option>City</option>
+			                        <option>Lorem Ipsum</option>
+			                        <option>Lorem Ipsum</option>
+			                    </select>
+			                </div>
+			            </div>
+			            <div class="form-group">
+			                <label class="col-sm-2 control-label">Pincode</label>
+			                <div class="col-sm-10">
+			                    <input type="text" placeholder="Pincode" class="form-control">
+			                </div>
+			            </div>
+			            <div class="form-group radio-div">
+			                <div class="col-sm-10 col-sm-offset-2">
+			                    <input type="radio" name="option"> <span>Title</span>
+			                    <input type="radio" name="option"> <span>Body</span>
+			                    <input type="radio" name="option"> <span>Tag</span>
+			                </div>
+			            </div>
+			            <div class="form-group radio-div">
+			                <label class="col-sm-2 control-label">Content</label>
+			                <div class="col-sm-10">
+			                    <textarea class="form-control"></textarea>
+			                </div>
+			            </div>
+			            <div class="form-group">
+			                <div class="col-sm-10 col-sm-offset-2">
+			                    <input type="radio" name="option"> <span style="vertical-align: text-bottom;">With Attachment</span>
+			                </div>
+			            </div>
+			            <div class="action-btns">
+			                <button class="btn">Search</button>
+			                <button class="btn">Reset</button>
+			                <button class="btn">Browse</button>
+			                <i class="fa fa-question-circle cursor-pointer"></i>
+			            </div>
+			        </form>
+			    </div>
+    		</div>
+    	</div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-home-col">
+        <ul class="nav nav-tabs main-nav" role="tablist" ng-init="innerTab = 1">
+            <li role="presentation" ng-class="{'active': innerTab == 1}"><a href="" ng-click="innerTab = 1" aria-controls="home" role="tab" data-toggle="tab">Service</a></li>
+            <li role="presentation" ng-class="{'active': innerTab == 2}"><a href="" ng-click="innerTab = 2" aria-controls="profile" role="tab" data-toggle="tab">Pocket</a></li>
+            <li role="presentation" ng-class="{'active': innerTab == 3}"><a href="" ng-click="innerTab = 3" aria-controls="messages" role="tab" data-toggle="tab">Reach</a></li>
+            <li role="presentation" ng-class="{'active': innerTab == 4}"><a href="" ng-click="innerTab = 4" aria-controls="settings" role="tab" data-toggle="tab">Identity</a></li>
+        </ul>
+        <div class="tab-content col-lg-12 col-md-12 col-sm-12 col-xs-12 slider-col no-padding">
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 1}">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 advance-search-col no-padding">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Item</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option>Lorem Ipsum</option>
+                                    <option>Lorem Ipsum</option>
+                                    <option>Lorem Ipsum</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Index</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" style="margin-bottom: 10px;">
+                                    <option>Class</option>
+                                    <option>Lorem Ipsum</option>
+                                    <option>Lorem Ipsum</option>
+                                </select>
+                                <select class="form-control" style="margin-bottom: 10px;">
+                                    <option>Category</option>
+                                    <option>Lorem Ipsum</option>
+                                    <option>Lorem Ipsum</option>
+                                </select>
+                                <select class="form-control">
+                                    <option>Sub Category</option>
+                                    <option>Lorem Ipsum</option>
+                                    <option>Lorem Ipsum</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Description</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Profile Pic</label>
+                            <div class="col-sm-10">
+                                <input type="file" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Cover Pic</label>
+                            <div class="col-sm-10">
+                                <input type="file" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Start Date</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Status</label>
+                            <div class="col-sm-10">
+                                <select class="form-control">
+                                    <option>Active</option>
+                                    <option>Inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Captcha</label>
+                            <div class="col-sm-3">
+                                <input type="text" value="2 X C V F" class="form-control" disabled="disabled">
+                            </div>
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-sm-3">
+                                <button class="btn btn-default">Verify</button>
+                            </div>
+                        </div>
+                        <!-- <div class="action-btns">
+                            <button class="btn">Search</button>
+                            <button class="btn">Reset</button>
+                            <button class="btn">Browse</button>
+                            <i class="fa fa-question-circle cursor-pointer"></i>
+                        </div> -->
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 2}">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 advance-search-col no-padding">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Pockets</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 3}">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 advance-search-col no-padding">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Reach</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 4}">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 advance-search-col no-padding">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Identity</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" style="margin-bottom: 10px;">
+                                    <option>Brand</option>
+                                    <option>Lorem Ipsum</option>
+                                    <option>Lorem Ipsum</option>
+                                </select>
+                                <input type="text" placeholder="Symbol" class="form-control" style="margin-bottom: 10px;">
+                                <input type="text" placeholder="Code" class="form-control" style="margin-bottom: 10px;">
+                                <input type="text" placeholder="ISIN" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <input type="checkbox" name="option"> <span>I Agree to Terms and Conditions</span> &nbsp; &nbsp;
+                                <button class="btn btn-default">Read</button>
+                            </div>
+                        </div>
+                        <div class="action-btns post-btns">
+                            <select class="form-control">
+                                <option>Public</option>
+                                <option>Only Me</option>
+                            </select>
+                            <button class="btn">Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
