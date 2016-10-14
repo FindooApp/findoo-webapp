@@ -1,0 +1,258 @@
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="padding: 11px 15px; border: 1px solid #ddd;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-header">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding" ng-show="!show_compose">
+            <a href="" ng-click="contactSetting()">Bhavesh Vora <i class="fa fa-chevron-down"></i></a>
+            <!-- Contact Setting Popup Starts -->
+            <div class="noti-div contact-setting" ng-show="show_contact_setting">
+                <div class="heading">
+                    <h5>Mute</h5>
+                </div>
+                <div class="heading">
+                    <h5>Block</h5>
+                </div>
+                <div class="heading">
+                    <h5>Export</h5>
+                </div>
+                <div class="heading">
+                    <h5>Clear</h5>
+                </div>
+                <div class="heading">
+                    <h5>Exit</h5>
+                </div>
+                <div class="heading">
+                    <h5>Remove</h5>
+                </div>
+            </div>
+            <!-- Contact Setting Popup Ends -->
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding" ng-show="show_compose">
+            <span>To:</span>
+            <input type="text" class="form-control">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding text-right">
+            <button class="compose-btn pull-right" ng-click="compose()"><i class="fa fa-paper-plane"></i> Compose</button>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding messages-col">
+        <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body">
+                    <div class="image-div">
+                        <img src="../app/images/bhavesh-vora.jpg">
+                    </div>
+                    <div class="text-div">
+                        <h5>Bhavesh Vora <span class="pull-right">5/24, 12:00pm</span></h5>
+                        <p>lorem ipsum is a dummy message in the main body.</p>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body">
+                    <div class="image-div">
+                    </div>
+                    <div class="text-div">
+                        <h5>Ankit Jiwani <span class="pull-right">5/24, 12:00pm</span></h5>
+                        <p>lorem ipsum is a dummy message in the main body.</p>
+                    </div>
+                </div> -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <p class="day-ago-p">Today</p>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <i class="fa fa-chevron-down" ng-click="msgOptions()"></i>
+            <!-- Message Options Popup Starts -->
+            <div class="noti-div" ng-show="show_msg_options">
+                <div class="heading">
+                    <h5>Reply</h5>
+                </div>
+                <div class="heading">
+                    <h5>Copy</h5>
+                </div>
+                <div class="heading">
+                    <h5>Forward</h5>
+                </div>
+                <div class="heading">
+                    <h5>Delete</h5>
+                </div>
+            </div>
+            <!-- Message Options Popup Ends -->
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <i class="fa fa-circle-thin"></i> <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span> <i class="fa fa-circle-thin"></i> <i class="fa fa-circle-thin"></i>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <p class="day-ago-p">Yesterday</p>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <i class="fa fa-circle"></i> <i class="fa fa-circle"></i> <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span> <i class="fa fa-circle"></i> <i class="fa fa-circle"></i>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <p class="day-ago-p">Wednesday</p>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <p class="day-ago-p">8 days Ago</p>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <p class="day-ago-p">1 Month Ago</p>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body received-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 message-body sent-body">
+            <div class="text-div">
+                <p>lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body. lorem ipsum is a dummy message in the main body.</p>
+            </div>
+            <span>5/24, 12:00pm</span>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 reply-col">
+        <div class="reply-div">
+            <textarea placeholder="Write a reply..." class="form-control"></textarea>
+        </div>
+        <div class="reply-btn-div">
+            <button><i class="fa fa-paperclip"></i> Add Files</button>
+            <button><i class="fa fa-camera"></i> Add Photos</button>
+            <i class="fa fa-paper-plane pull-right"></i>
+            <i class="fa fa-long-arrow-left pull-right"></i>
+            <input type="checkbox" class="pull-right">
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    function setHeight() {
+        windowHeight = $(window).innerHeight();
+        $('.message-body-col').css('height', windowHeight - 142);
+        $('.all-contact-col').css('height', windowHeight - 241);
+        $('.messages-col').css('height', windowHeight - 347);
+    };
+    setHeight();
+    $(window).resize(function() {
+        setHeight();
+    });
+});
+</script>

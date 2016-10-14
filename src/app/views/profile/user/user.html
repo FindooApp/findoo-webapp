@@ -1,27 +1,45 @@
-<div class="user-detail container-fluid">
+<div class="user-detail user-section container-fluid">
     <div class="section-detail row">
-        <div class="col-md-6">
-            <h3>Milind Rasal</h3>
-            <span>Profile Name</span>
+        <div class="col-md-6" ng-if="!editMode">
+            <h3>User Name</h3>
+            <span>Milind Rasal</span>
         </div>
-        <div class="col-md-6 edit-section">
-            <span class="glyphicon glyphicon-edit"></span>
+        <div class="col-md-6 editable-col" ng-if="editMode">
+            <p>User Name</p>
+            <input type="text" placeholder="User Name" value="Milind Rasal" class="form-control" style="margin-bottom: 10px;">
+            <select class="form-control">
+                <option>FL</option>
+                <option>LF</option>
+                <option>FML</option>
+                <option>LFM</option>
+            </select>
+        </div>
+        <div class="col-md-6 edit-section edit-icon-section">
+            <span class="glyphicon glyphicon-edit cursor-pointer" ng-click="edit()" ng-if="!editMode"></span>
+            <i class="fa fa-check cursor-pointer" ng-click="save()" ng-if="editMode"></i>
+            <i class="fa fa-times cursor-pointer" ng-click="cancel()" ng-if="editMode"></i>
             <span class="edited-status">Last changed 01-12-2015 | 9:00pm</span>
         </div>
     </div>
     <div class="section-detail row">
-        <div class="col-md-6">
-            <h3>User</h3>
-            <span>User Name</span>
+        <div class="col-md-6" ng-if="!editId">
+            <h3>User ID</h3>
+            <span>MilindR</span>
         </div>
-        <div class="col-md-6 edit-section">
-            <span class="glyphicon glyphicon-edit"></span>
+        <div class="col-md-6 editable-col" ng-if="editId">
+            <p>User ID</p>
+            <input type="text" placeholder="User ID" value="MilindR" class="form-control">
+        </div>
+        <div class="col-md-6 edit-section edit-icon-section">
+            <span class="glyphicon glyphicon-edit cursor-pointer" ng-click="editUserId()" ng-if="!editId"></span>
+            <i class="fa fa-check cursor-pointer" ng-click="saveId()" ng-if="editId"></i>
+            <i class="fa fa-times cursor-pointer" ng-click="cancelId()" ng-if="editId"></i>
             <span class="edited-status">Last changed 01-12-2015 | 9:00pm</span>
         </div>
     </div>
     
     <div class="section-detail row email-section">
-        <div class="col-md-6">
+        <div class="col-md-6" ng-if="!editEmail">
             <h3>Email </h3> 
             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
             <div class="input-group-btn" dropdown is-open="isopen">
@@ -36,25 +54,37 @@
               </div><!-- /btn-group -->
             <span>milind.rasal@gmail.com</span>
         </div>
-        <div class="col-md-6 edit-section">
-            <span class="glyphicon glyphicon-edit"></span>
+        <div class="col-md-6 editable-col" ng-if="editEmail">
+            <p>Email</p>
+            <input type="text" placeholder="Email" value="milind.rasal@gmail.com" class="form-control">
+        </div>
+        <div class="col-md-6 edit-section edit-icon-section">
+            <span class="glyphicon glyphicon-edit cursor-pointer" ng-click="editEmailId()" ng-if="!editEmail"></span>
+            <i class="fa fa-check cursor-pointer" ng-click="saveEmail()" ng-if="editEmail"></i>
+            <i class="fa fa-times cursor-pointer" ng-click="cancelEmail()" ng-if="editEmail"></i>
             <span class="edited-status">Verified | Primary</span>
         </div>
     </div>
     
     <div class="section-detail row">
-        <div class="col-md-6">
+        <div class="col-md-6" ng-if="!editPass">
             <h3>Password</h3>
             <span>********</span>
         </div>
-        <div class="col-md-6 edit-section">
-            <span class="glyphicon glyphicon-edit"></span>
+        <div class="col-md-6 editable-col" ng-if="editPass">
+            <p>Password</p>
+            <input type="password" placeholder="Password" value="1234567890" class="form-control">
+        </div>
+        <div class="col-md-6 edit-section edit-icon-section">
+            <span class="glyphicon glyphicon-edit cursor-pointer" ng-click="editPassword()" ng-if="!editPass"></span>
+            <i class="fa fa-check cursor-pointer" ng-click="savePass()" ng-if="editPass"></i>
+            <i class="fa fa-times cursor-pointer" ng-click="cancelPass()" ng-if="editPass"></i>
             <span class="edited-status">Last changed 01-12-2015 | 9:00pm</span>
         </div>
     </div>
     
     <div class="section-detail row mobile-section">
-        <div class="col-md-6">
+        <div class="col-md-6" ng-if="!editNo">
             <h3>Mobile</h3>
             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
             <div class="input-group-btn" dropdown is-open="isopen">
@@ -69,14 +99,20 @@
               </div><!-- /btn-group -->
             <span>+91 9923496437, Vodafone, India</span>
         </div>
-        <div class="col-md-6 edit-section">
-            <span class="glyphicon glyphicon-edit"></span>
+        <div class="col-md-6 editable-col" ng-if="editNo">
+            <p>Mobile</p>
+            <input type="text" placeholder="Mobile" value="+91 9923496437" class="form-control">
+        </div>
+        <div class="col-md-6 edit-section edit-icon-section">
+            <span class="glyphicon glyphicon-edit cursor-pointer" ng-click="editMobileNo()" ng-if="!editNo"></span>
+            <i class="fa fa-check cursor-pointer" ng-click="saveNo()" ng-if="editNo"></i>
+            <i class="fa fa-times cursor-pointer" ng-click="cancelNo()" ng-if="editNo"></i>
             <span class="edited-status">Verified | Primary</span>
         </div>
     </div>
     
     <div class="section-detail row connect-section">
-        <div class="col-md-6 ">
+        <div class="col-md-6" ng-if="!editConnect">
             <h3>Connect</h3>
             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
             <div class="input-group-btn" dropdown is-open="isopen">
@@ -96,31 +132,67 @@
                 <li><a href="#">Google +</a></li>
             </ul>
         </div>
-        <div class="col-md-6 edit-section">
-            <span class="glyphicon glyphicon-edit"></span>
+        <div class="col-md-6 editable-col" ng-if="editConnect">
+            <p>Connect</p>
+            <select class="form-control" style="margin-bottom: 10px;">
+                <option>Facebook</option>
+                <option>Twitter</option>
+                <option>LinkedIn</option>
+                <option>Google +</option>
+                <option>Any Other</option>
+            </select>
+            <input type="text" placeholder="Email" class="form-control" style="margin-bottom: 10px;">
+            <input type="password" placeholder="Password" class="form-control">
+        </div>
+        <div class="col-md-6 edit-section edit-icon-section">
+            <span class="glyphicon glyphicon-edit cursor-pointer" ng-click="editSocial()" ng-if="!editConnect"></span>
+            <i class="fa fa-check cursor-pointer" ng-click="saveSocial()" ng-if="editConnect"></i>
+            <i class="fa fa-times cursor-pointer" ng-click="cancelSocial()" ng-if="editConnect"></i>
             <span class="edited-status">Last changed 01-12-2015  | 9:00pm</span>
         </div>
     </div>
     
     <div class="section-detail row">
-        <div class="col-md-6">
+        <div class="col-md-6" ng-if="!editLanguage">
             <h3>Language</h3>
             <span>Default: English</span>
             <span>Preferred: Gujarati</span>
         </div>
-        <div class="col-md-6 edit-section">
-            <span class="glyphicon glyphicon-edit"></span>
+        <div class="col-md-6 editable-col" ng-if="editLanguage">
+            <p>Preffered Language</p>
+            <select class="form-control">
+                <option>English</option>
+                <option>Hindi</option>
+                <option>Gujarati</option>
+                <option>Marathi</option>
+            </select>
+        </div>
+        <div class="col-md-6 edit-section edit-icon-section">
+            <span class="glyphicon glyphicon-edit cursor-pointer" ng-click="editPrefferedLang()" ng-if="!editLanguage"></span>
+            <i class="fa fa-check cursor-pointer" ng-click="saveLang()" ng-if="editLanguage"></i>
+            <i class="fa fa-times cursor-pointer" ng-click="cancelLang()" ng-if="editLanguage"></i>
             <span class="edited-status">Verified | Primary</span>
         </div>
     </div>
     
     <div class="section-detail row">
-        <div class="col-md-6">
+        <div class="col-md-6" ng-if="!editStat">
             <h3>Status</h3>
             <span>Online</span>
         </div>
-        <div class="col-md-6 edit-section">
-            <span class="glyphicon glyphicon-edit"></span>
+        <div class="col-md-6 editable-col" ng-if="editStat">
+            <p>Status</p>
+            <select class="form-control">
+                <option>Online</option>
+                <option>Offline</option>
+                <option>Away</option>
+                <option>Do Not Disturb</option>
+            </select>
+        </div>
+        <div class="col-md-6 edit-section edit-icon-section">
+            <span class="glyphicon glyphicon-edit cursor-pointer" ng-click="editStatus()" ng-if="!editStat"></span>
+            <i class="fa fa-check cursor-pointer" ng-click="saveStatus()" ng-if="editStat"></i>
+            <i class="fa fa-times cursor-pointer" ng-click="cancelStatus()" ng-if="editStat"></i>
             <span class="edited-status">Active</span>
         </div>
     </div>

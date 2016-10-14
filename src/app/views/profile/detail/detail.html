@@ -1,10 +1,25 @@
 <div class="profile-detail container-fluid">
-    <div class="row profile-sec">
+    <div class="row profile-sec no-bottom-margin">
         <div class="col-md-3">
             <div class="profile-image">
                 <img src="app/images/bhavesh-vora.jpg" alt="placeholder" />
+                <i class="fa fa-camera profile-image-icon" ng-click="show_camera = !show_camera"></i>
+                <div class="noti-div message-popup notifications-popup other-links camera-popup" ng-show="show_camera">
+                    <div class="heading">
+                        <h5>Choose</h5>
+                    </div>
+                    <div class="heading">
+                        <h5>Upload</h5>
+                    </div>
+                    <div class="heading">
+                        <h5>Reposition</h5>
+                    </div>
+                    <div class="heading">
+                        <h5>Remove</h5>
+                    </div>
+                </div>
             </div>
-            <div>
+            <div class="text-center">
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
                 <span class="glyphicon glyphicon-star"></span>
@@ -12,244 +27,253 @@
                 <span class="glyphicon glyphicon-star-empty"></span>
                 <span>4.46/255</span>
             </div>
+            <i class="fa fa-camera cover-img-icon" ng-click="show_cover_image = !show_cover_image"></i>
+            <div class="noti-div message-popup notifications-popup other-links camera-popup cover-camera" ng-show="show_cover_image">
+                <div class="heading">
+                    <h5>Choose</h5>
+                </div>
+                <div class="heading">
+                    <h5>Upload</h5>
+                </div>
+                <div class="heading">
+                    <h5>Reposition</h5>
+                </div>
+                <div class="heading">
+                    <h5>Remove</h5>
+                </div>
+            </div>
         </div>
         <div class="col-md-9 user-details">
-            <h3 class="profile-name"><a href="#">Bhavesh Vora</a></h3>
-            <div class="dropdown" dropdown="" is-open="isopen">
-                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-menu-down"></span></button>
+            <h3 class="profile-name"><a href="#">Bhavesh Vora</a> <a href="" class="seal">Verified</a> <a href="" class="seal">Trusted</a></h3>
+            <div class="dropdown down-arrow" dropdown="" is-open="isopen">
+                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="true" style="background: transparent; outline: none;"> <span class="glyphicon glyphicon-menu-down"></span></button>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
+                    <li><a href="">Edit</a></li>
+                    <li role="separator" class="divider no-top-margin no-bottom-margin"></li>
+                    <li><a href="">Report</a></li>
+                    <li><a href="">Block</a></li>
                 </ul>
-              </div>
+            </div>
             <p class="tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <ul class="row pockets">
+            <ul class="row pockets no-border no-top-margin">
                 <li class="col-md-12">
-                    <a href="#">Pocket 1</a> 
-                    <a href="#">Pocket 2</a> 
-                    <a href="#">Pocket 3</a> 
+                    <a href="#">Pocket 1</a>
+                    <a href="#">Pocket 2</a>
+                    <a href="#">Pocket 3</a>
                     <a href="#">Pocket 4</a>
                     <a href="#">Pocket 5</a>
                     <a href="#">Pocket 6</a>
                 </li>
             </ul>
             <a href="#">More...</a>
-            <div class="address">
-                <span class="glyphicon glyphicon-map-marker"></span><address>City, State, Country</address>
+            <div class="address no-border no-top-margin">
+                <span class="glyphicon glyphicon-map-marker"></span>
+                <address>City, State, Country</address>
             </div>
-            <ul class="row review-section">
-                <li class="col-md-4">
-                    <a href="#"><span class="glyphicon glyphicon-thumbs-up"></span>Verified</a>
-                    <button class="btn btn-default btn-primary">Track</button>
+            <ul class="row review-section action-btns profile-action-btns">
+                <!-- <li class="col-md-4">
+                    
+                </li> -->
+                <li>
+                    <!-- <a href=""><span class="glyphicon glyphicon-thumbs-up"></span>Verified</a> -->
+                    <button class="btn"><i class="fa fa-eye"></i> View (265)</button>
                 </li>
-                <li class="col-md-4">
-                    <a href="#"><span class="glyphicon glyphicon-ok-sign"></span>Trusted</a>
-                    <button class="btn btn-default btn-primary">Connect</button>
+                <li>
+                    <!-- <a href=""><span class="glyphicon glyphicon-thumbs-up"></span>Verified</a> -->
+                    <button class="btn"><i class="fa fa-map-marker"></i> Track (265)</button>
                 </li>
-                <li class="col-md-4">
-                    <a href="#"><span class="glyphicon glyphicon-circle-arrow-down"></span>Seal 3</a>
-                    <button class="btn btn-default btn-primary">Message</button>
+                <li>
+                    <!-- <a href=""><span class="glyphicon glyphicon-ok-sign"></span>Trusted</a> -->
+                    <button class="btn"><i class="fa fa-connectdevelop"></i> Connect (265)</button>
                 </li>
-
+                <li>
+                    <!-- <a href=""><span class="glyphicon glyphicon-thumbs-up"></span>Verified</a> -->
+                    <button class="btn"><i class="fa fa-hand-o-right"></i> Refer (265)</button>
+                </li>
+                <!-- <li>
+                    <a href=""><span class="glyphicon glyphicon-thumbs-up"></span>Verified</a>
+                    <button class="btn"><i class="fa fa-star-o"></i> Review (265)</button>
+                </li> -->
+                <li>
+                    <!-- <a href=""><span class="glyphicon glyphicon-circle-arrow-down"></span>Seal 3</a> -->
+                    <button class="btn"><i class="fa fa-envelope"></i> Message</button>
+                </li>
             </ul>
         </div>
     </div>
-    <div class="row video-sec">
-        <div class="col-md-12">
-            <div class="video-box">
-                <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
-            </div>
-        </div>
-        <div class="clearfix"></div>
-        <ul class="video-response clearfix">
-            <li class="col-md-3">
-                <span class="glyphicon glyphicon-eye-open"></span><a href="#">View</a><span>(365)</span>
-            </li>
-            <li class="col-md-3">
-                <span class="glyphicon glyphicon-thumbs-up"></span><a href="#">Wow</a><span>(365)</span>
-            </li>
-            <li class="col-md-3">
-                <span class="glyphicon glyphicon-hand-right"></span><a href="#">Refer</a><span>(365)</span>
-            </li>
-            <li class="col-md-3">
-                <span class="glyphicon glyphicon-star-empty"></span><a href="#">Review</a><span>(365)</span>
-            </li>
-        </ul>
+    <!-- <div class="row video-sec">
+        
     
-    </div>
-    <div class="main-tab">
+    </div> -->
+    <div class="main-tab top-tab">
         <div class="tab-section">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#">Overview</a></li>
-            <li><a href="#">Crate</a></li>
-            <li><a href="#">Feed</a></li>
-            <li><a href="#">Heap</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Reviews</a></li>
-        </ul>
-    </div>
-        <div class="sub-tab">
-        <div class="sec-title">
-            <h2>About Profile</h2>
-        </div>
-        <div class="tab-section">
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">General</a></li>
-                <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">KYC</a></li>
-                <li role="presentation"><a href="#family" aria-controls="profile" role="tab" data-toggle="tab">Family</a></li>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Overview</a></li>
+                <li><a href="#">Crate</a></li>
+                <li><a href="#">Feed</a></li>
+                <li><a href="#">Heap</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Reviews</a></li>
             </ul>
-          <!-- Tab panes -->
-            <div class="tab-content clearfix">
-                <div role="tabpanel" class="tab-pane active login" id="general">
-                    <div class="row content-profile">
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Age: 42Yrs 3Mth</li>
-                                <li>Relationship: Single</li>
-                                <li>Origin: Country Name</li>
-                                <li>Tax Status: NRI</li>
-                            </ul>
+        </div>
+        <div class="sub-tab">
+            <div class="sec-title">
+                <h2>Overview</h2>
+            </div>
+            <div class="tab-section sub-tab-section">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">General</a></li>
+                    <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">KYC</a></li>
+                    <li role="presentation"><a href="#family" aria-controls="profile" role="tab" data-toggle="tab">Family</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div role="tabpanel" class="tab-pane active login" id="general">
+                        <div class="row video-sec">
+                            <div class="col-md-12">
+                                <div class="video-box">
+                                    <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <ul>
-                                <li>Gender: Male</li>
-                                <li>Occupation: Job</li>
-                                <li>Resident: Country Name</li>
-                                <li>Tax Status: Foreigner PR</li>
-                            </ul>
+                        <div class="row content-profile">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Age: 42Yrs 3Mth</li>
+                                    <li>Relationship: Single</li>
+                                    <li>Origin: Country Name</li>
+                                    <li>Tax Status: NRI</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul>
+                                    <li>Gender: Male</li>
+                                    <li>Occupation: Job</li>
+                                    <li>Resident: Country Name</li>
+                                    <li>Tax Status: Foreigner PR</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content-detail">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                            <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
                         </div>
                     </div>
-                    <div class="content-detail">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
-                        <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                    <div role="tabpanel" class="tab-pane register" id="kyc">
+                        k
                     </div>
-                </div>
-                <div role="tabpanel" class="tab-pane register" id="kyc">
-                    k
-                </div>
-                <div role="tabpanel" class="tab-pane register" id="family">
-                    F
+                    <div role="tabpanel" class="tab-pane register" id="family">
+                        F
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
-    
-        <div class="sub-tab">
-        <div class="sec-title">
-            <h2>Experience (15Yrs 6Mth)</h2>
-        </div>
-        <div class="tab-section">
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">Professional (10yrs 2Mth)</a></li>
-                <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Social (10yrs 2Mth)</a></li>
-            </ul>
-          <!-- Tab panes -->
-            <div class="tab-content clearfix">
-                <div role="tabpanel" class="tab-pane active login" id="general">
-                    <div class="row content-profile">
-                        <div class="col-md-9">
-                            <ul>
-                                <li>Designation</li>
-                                <li>Entety/ Profile Name</li>
-                                <li>Period: 10-2005 to 12-2015</li>
-                                <li>Location: Area, City, State, Country</li>
-                            </ul>
+        <div class="sub-tab sub-tab-section">
+            <div class="sec-title">
+                <h2>Experience (15Yrs 6Mth)</h2>
+            </div>
+            <div class="tab-section">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">Professional (10yrs 2Mth)</a></li>
+                    <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Social (10yrs 2Mth)</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div role="tabpanel" class="tab-pane active login" id="general">
+                        <div class="row content-profile">
+                            <div class="col-md-9">
+                                <ul>
+                                    <li>Designation</li>
+                                    <li>Entety/ Profile Name</li>
+                                    <li>Period: 10-2005 to 12-2015</li>
+                                    <li>Location: Area, City, State, Country</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                        <div class="content-detail">
+                            <h4>KRA</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
                         </div>
                     </div>
-                    <div class="content-detail">
-                        <h4>KRA</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                    <div role="tabpanel" class="tab-pane register" id="kyc">
+                        k
                     </div>
-                </div>
-                <div role="tabpanel" class="tab-pane register" id="kyc">
-                    k
                 </div>
             </div>
-
         </div>
-    </div>
-    
-        <div class="sub-tab">
-        <div class="sec-title">
-            <h2>Skills (15)</h2>
-        </div>
-        <div class="tab-section">
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">Personal (5)</a></li>
-                <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">People (5)</a></li>
-                <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Professional (5)</a></li>
-            </ul>
-          <!-- Tab panes -->
-            <div class="tab-content clearfix">
-                <div role="tabpanel" class="tab-pane active login" id="general">
-                    <div class="row content-profile">
-                        <div class="col-md-12">
-                            <ul>
-                                <li>Skill 1 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
-                                <li>Skill 2 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
-                                <li>Skill 3 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
-                                <li>Skill 4 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
-                                
-                            </ul>
+        <div class="sub-tab sub-tab-section">
+            <div class="sec-title">
+                <h2>Skills (15)</h2>
+            </div>
+            <div class="tab-section">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">Personal (5)</a></li>
+                    <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">People (5)</a></li>
+                    <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Professional (5)</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div role="tabpanel" class="tab-pane active login" id="general">
+                        <div class="row content-profile">
+                            <div class="col-md-12">
+                                <ul>
+                                    <li>Skill 1 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                    <li>Skill 2 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                    <li>Skill 3 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                    <li>Skill 4 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div role="tabpanel" class="tab-pane register" id="kyc">
-                    k
-                </div>
-                <div role="tabpanel" class="tab-pane register" id="kyc">
-                    k
+                    <div role="tabpanel" class="tab-pane register" id="kyc">
+                        k
+                    </div>
+                    <div role="tabpanel" class="tab-pane register" id="kyc">
+                        k
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
-        <div class="sub-tab">
-        <div class="sec-title">
-            <h2>Knowledge (5)</h2>
-        </div>
-        <div class="tab-section">
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">Academic (2)</a></li>
-                <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Professioanl (3)</a></li>
-                <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Other (0)</a></li>
-            </ul>
-          <!-- Tab panes -->
-            <div class="tab-content clearfix">
-                <div role="tabpanel" class="tab-pane active login" id="general">
-                    <div class="row content-profile">
-                        <div class="col-md-9">
-                            <ul>
-                                <li>Course Name</li>
-                                <li>Entety/ Profile Name</li>
-                                <li>Period: 10-2005 to 12-2015</li>
-                                <li>Location: Area, City, State, Country</li>
-                            </ul>
+        <div class="sub-tab sub-tab-section">
+            <div class="sec-title">
+                <h2>Knowledge (5)</h2>
+            </div>
+            <div class="tab-section">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">Academic (2)</a></li>
+                    <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Professioanl (3)</a></li>
+                    <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Other (0)</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div role="tabpanel" class="tab-pane active login" id="general">
+                        <div class="row content-profile">
+                            <div class="col-md-9">
+                                <ul>
+                                    <li>Course Name</li>
+                                    <li>Entety/ Profile Name</li>
+                                    <li>Period: 10-2005 to 12-2015</li>
+                                    <li>Location: Area, City, State, Country</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                            </div>
                         </div>
-                        <div class="col-md-3">
-                            <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                        <div class="content-detail">
+                            <h4>KRA</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet.</p>
                         </div>
                     </div>
-                    <div class="content-detail">
-                        <h4>KRA</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet.</p>
+                    <div role="tabpanel" class="tab-pane register" id="kyc">
+                        k
                     </div>
-                </div>
-                <div role="tabpanel" class="tab-pane register" id="kyc">
-                    k
                 </div>
             </div>
-
         </div>
-    </div>
     </div>
 </div>
-

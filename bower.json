@@ -14,7 +14,8 @@
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
     "angular": "~1.4.2",
-    "font-awesome": "~4.5.0"
+    "font-awesome": "~4.5.0",
+    "angular-chart.js": "^1.0.3"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"
@@ -22,12 +23,12 @@
   "overrides": {
     "bootstrap-sass": {
       "main": [
-          "assets/stylesheets/_bootstrap.scss",
-          "../font-awesome/fonts/fontawesome-webfont.eot",
-          "../font-awesome/fonts/fontawesome-webfont.svg",
-          "../font-awesome/fonts/fontawesome-webfont.ttf",
-          "../font-awesome/fonts/fontawesome-webfont.woff",
-          "../font-awesome/fonts/fontawesome-webfont.woff2"
+        "assets/stylesheets/_bootstrap.scss",
+        "../font-awesome/fonts/fontawesome-webfont.eot",
+        "../font-awesome/fonts/fontawesome-webfont.svg",
+        "../font-awesome/fonts/fontawesome-webfont.ttf",
+        "../font-awesome/fonts/fontawesome-webfont.woff",
+        "../font-awesome/fonts/fontawesome-webfont.woff2"
       ]
     }
   },

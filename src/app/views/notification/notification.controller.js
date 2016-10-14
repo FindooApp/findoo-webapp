@@ -1,4 +1,4 @@
-angular.module('findoo').controller('MainController',function ($scope,$state){
+angular.module('findoo').controller('NotificationController',function ($scope,$state){
     $scope.show_noti = false;
     $scope.show_message = false;
     $scope.show_profile = false;
@@ -9,13 +9,9 @@ angular.module('findoo').controller('MainController',function ($scope,$state){
     $scope.sidebarAccor5 = true;
     $scope.sidebarAccor6 = true;
     $scope.sidebarAccor7 = true;
-    $scope.sidebarAccor8 = true;
-    $scope.sidebarAccor9 = true;
     $scope.trackbtn = false;
     $scope.show_enquire_form = false;
     $scope.show_map = false;
-    $scope.show_list_view = true;
-    $scope.show_review_form = false;
     var vm = this;
     vm.gotTo = function(name){
       var parts=$state.current.name.split(".");
@@ -68,44 +64,4 @@ angular.module('findoo').controller('MainController',function ($scope,$state){
     $scope.map = function() {
         $scope.show_map = !$scope.show_map;
     }
-    $scope.listView = function() {
-        $scope.show_list_view = true;
-    }
-    $scope.gridView = function() {
-        $scope.show_list_view = false;
-    }
-    $scope.review = function() {
-        $scope.show_review_form = !$scope.show_review_form;
-    }
   });
-
-(function () {
-    'use strict';
-
-    angular.module('findoo').directive('routeCssClassnames', routeCssClassnames);
-
-    function routeCssClassnames($rootScope) {
-        return {
-            restrict: 'A',
-            scope: {},
-            link: function (scope, elem, attr, ctrl) {
-
-                $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-                    var fromClassnames = angular.isDefined(fromState.data) && angular.isDefined(fromState.data.cssClassnames) ? fromState.data.cssClassnames : null;
-                    var toClassnames = angular.isDefined(toState.data) && angular.isDefined(toState.data.cssClassnames) ? toState.data.cssClassnames : null;
-
-                    // don't do anything if they are the same
-                    if (fromClassnames != toClassnames) {
-                        if (fromClassnames) {
-                            elem.removeClass(fromClassnames);
-                        }
-
-                        if (toClassnames) {
-                            elem.addClass(toClassnames);
-                        }
-                    }
-                });
-            }
-        }
-    }
-}());

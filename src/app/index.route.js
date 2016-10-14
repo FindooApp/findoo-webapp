@@ -33,6 +33,14 @@
         templateUrl: 'app/views/main/home/home.html',
         controller: 'HomeController'
       })
+      .state('search.home.list',{
+        url:'/list',
+        templateUrl: 'app/views/main/home/list/list.html'
+      })
+      .state('search.home.detail',{
+        url:'/detail',
+        templateUrl: 'app/views/main/home/detail/detail.html'
+      })
       .state('search.apps',{
         url:'/apps',
         templateUrl: 'app/views/main/apps/apps.html',
@@ -163,6 +171,10 @@
         url:'/map',
         templateUrl: 'app/views/main/profiles/map/map.html'
       })
+      .state('search.profiles.detail',{
+        url:'/detail',
+        templateUrl: 'app/views/main/profiles/detail/detail.html'
+      })
       .state('search.resources',{
         url:'/resources',
         templateUrl: 'app/views/main/resources/resources.html',
@@ -221,6 +233,37 @@
       .state('myprofile.settings',{
         url:'/settings',
         templateUrl: 'app/views/profile/settings/settings.html'
+      })
+      .state('notification',{
+        url:'/notification',
+        templateUrl: 'app/views/notification/notification.html',
+        controller: 'NotificationController'
+      })
+      .state('notification.list',{
+        url:'/list',
+        templateUrl: 'app/views/notification/list/list.html'
+      })
+      .state('message',{
+        url:'/message',
+        templateUrl: 'app/views/message/message.html',
+        controller: 'MessageController'
+      })
+      .state('message.list',{
+        url:'/list',
+        templateUrl: 'app/views/message/list/list.html'
+      })
+      .state('message.add-group',{
+        url:'/add/group',
+        templateUrl: 'app/views/message/add-group/add-group.html'
+      })
+      .state('message.add-list',{
+        url:'/add/list',
+        templateUrl: 'app/views/message/add-list/add-list.html'
+      })
+      .state('contacts',{
+        url:'/contacts',
+        templateUrl: 'app/views/contacts/contacts.html',
+        controller: 'ContactsController'
       });
 
 
