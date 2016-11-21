@@ -1,0 +1,139 @@
+<div class="row account-row">
+    <!-- Login and sigup Section Starts -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="text-center account-window">
+            <h1 class="logo" ui-sref="home"><span>Findoo</span></h1>
+            <h2>Single Account for all of Findoo</h2>
+            <p>Now, experience social approach in finance! You are signing in to Search</p>
+            <div class="tab-section" ng-init="tab = 1">
+                <ul class="nav nav-tabs account-tabs" role="tablist">
+                    <li role="presentation" ng-class="{'active': tab == 1}"><a href="" ng-click="tab = 1" aria-controls="home" role="tab" data-toggle="tab">Sign In</a></li>
+                    <li role="presentation" ng-class="{'active': tab == 2}"><a href="" ng-click="tab = 2" aria-controls="profile" role="tab" data-toggle="tab">Register</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div ng-controller="LoginController" role="tabpanel" class="tab-pane login" id="login" ng-class="{'active': tab == 1}" ng-show="tab == 1">
+                        <form name="loginForm" ng-submit="!loginForm.$invalid && doLogin()" novalidate>
+                            <h3 class="pull-left">Welcome Back!</h3>
+                            <a href="#" class="pull-right">Need Help?</a>
+                            <span class="clearfix"></span>
+                            <input type="text" placeholder="Mobile, Email or Username" class="form-control" ng-model="loginData.username" ng-required="loginForm.username">
+                            <input type="password" placeholder="Password" class="form-control" ng-model="loginData.password" ng-required="loginForm.password">
+                            <label class="pul-left">
+                                <input type="checkbox" ng-model="rememberMe">Remember Me</label>
+                            <a href="/forgot-password" class="pull-right">Forgot password?</a>
+                            <span class="clearfix"></span>
+                            <button type="submit" ng-disabled="loginForm.$invalid" class="btn btn-default btn-submit">Submit</button>
+                        </form>
+                    </div>
+                    <div ng-controller="RegisterController" role="tabpanel" class="tab-pane register" id="register" ng-class="{'active': tab == 2}" ng-show="tab == 2">
+                        <form name="registrationForm" class="form-horizontal" ng-submit="!registrationForm.$invalid && registrationForm.password.$viewValue == registrationForm.confirm_password.$viewValue && doRegister()" novalidate>
+                            <h3 class="pull-left">Get Started - it's free</h3>
+                            <a href="#" class="pull-right">Need Help?</a>
+                            <span class="clearfix"></span>
+                            <div class="form-inline">
+                                <div class="form-group" ng-class="{'has-error' : registrationForm.firstname.$error.required && registrationForm.firstname.$dirty}" style="margin-right:2%;">
+                                    <label class="sr-only" for="">First Name</label>
+                                    <input type="text" class="form-control" name="firstname" placeholder="First Name" ng-required="registrationForm.firstname" ng-model="registration.firstname">
+                                </div>
+                                <div class="form-group" ng-class="{'has-error' : registrationForm.lastname.$error.required && registrationForm.lastname.$dirty}">
+                                    <label class="sr-only" for="">Last Name</label>
+                                    <input type="text" class="form-control" name="lastname" placeholder="Last Name" ng-required="registrationForm.lastname" ng-model="registration.lastname">
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                <div class="form-group"  ng-class="{'has-error' : registrationForm.username.$error.required && registrationForm.username.$dirty}"  style="margin-right:2%;">
+                                    <label class="sr-only" for="">Username</label>
+                                    <input type="text" placeholder="Username" name="username" class="form-control" ng-model="registration.username">
+                                </div>
+                                <div class="form-group"  ng-class="{'has-error' : registrationForm.email.$error.required && registrationForm.email.$dirty}">
+                                    <label class="sr-only" for="">Email</label>
+                                    <input type="email" class="form-control" name="email" placeholder="Email" ng-required="registrationForm.email" ng-model="registration.email">
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                <div class="form-group"  ng-class="{'has-error' : registrationForm.password.$error.required && registrationForm.password.$dirty}"  style="margin-right:2%;">
+                                    <label class="sr-only" for="">Password</label>
+                                    <input type="password" placeholder="Password" name="password" class="form-control" ng-required="registraregistrationFormtion.password" ng-model="registration.password">
+                                </div>
+                                <div class="form-group"  ng-class="{'has-error' : registrationForm.confirm_password.$dirty && (registrationForm.confirm_password.$error.required || registrationForm.password.$viewValue != registrationForm.confirm_password.$viewValue)}">
+                                    <label class="sr-only" for="">Confirm Password</label>
+                                    <input type="password" placeholder="Confirm Password" name="confirm_password" ng-required="registrationForm.confirm_password" class="form-control" ng-model="registration.confirm_password">
+                                </div>
+                            </div>
+                            <div vc-recaptcha key="'6Le36QgUAAAAALgarpNbE1YfpMxKyEO1Zc4IDCCZ'" ng-model="registration.myRecaptchaResponse"></div>
+                            <p class="text-center">By <a href="#">Signing up</a>, you agree to findoo’s <a href="#">terms and conditions</a></p>
+                            <button type="submit" ng-disabled="registrationForm.$invalid || registrationForm.password.$viewValue != registrationForm.confirm_password.$viewValue" class="btn btn-default btn-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Login and sigup Section Ends -->
+    <!-- Help Section Starts -->
+    <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 help-section">
+        <h3>This module will help you to...</h3>
+        <div class="col-md-2 col-md-offset-1">
+            <span class="help-icon"></span>
+            <h4>Search</h4>
+            <p>Search profiles of participants in finance industry</p>
+        </div>
+        <div class="col-md-2">
+            <span class="help-icon"></span>
+            <h4>Account</h4>
+            <p>Search variety of finance products that suits your needs</p>
+        </div>
+        <div class="col-md-2">
+            <span class="help-icon"></span>
+            <h4>Community</h4>
+            <p>Search various free or paid financial services near you with reviews</p>
+        </div>
+        <div class="col-md-2">
+            <span class="help-icon"></span>
+            <h4>Messages</h4>
+            <p>Search diffferent types of finance related posts from many experts</p>
+        </div>
+        <div class="col-md-2">
+            <span class="help-icon"></span>
+            <h4>Posts</h4>
+            <p>Search respective resources of finance from our public repository</p>
+        </div>
+    </div> -->
+    <!-- Help Section Ends -->
+    <!--footer Section -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer navbar-fixed-bottom">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding">
+            <ul class="nav nav-pills">
+                <li role="presentation"><a href="#">About</a></li>
+                <li role="presentation"><a href="#">Business</a></li>
+                <li role="presentation"><a href="#">Advertise</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center copy no-padding">
+            <span>&copy; 2015 Findoo</span>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding">
+            <ul class="nav nav-pills nav-right">
+                <li role="presentation"><a href="#">Support</a></li>
+                <li role="presentation"><a href="#">Privacy</a></li>
+                <li role="presentation"><a href="#">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Footer Section Ends -->
+</div>
+<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+<!-- Window height -->
+<script>
+$(document).ready(function() {
+    function setHeight() {
+        windowHeight = $(window).innerHeight();
+        $('.account-row').css('min-height', windowHeight);
+    };
+    setHeight();
+    $(window).resize(function() {
+        setHeight();
+    });
+});
+</script>

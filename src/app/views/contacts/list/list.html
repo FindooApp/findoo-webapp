@@ -1,0 +1,351 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-products-col no-padding">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding search-found">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 action-btns no-border no-padding no-margin">
+			<div class="btn-group btn select-contact-btn" uib-dropdown>
+				<div class="checkbox-div">
+					<input type="checkbox"> 
+				</div>
+				<div id="select-button" uib-dropdown-toggle ng-disabled="disabled">
+					<i class="fa fa-chevron-down"></i>
+				</div>
+				<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="select-button">
+					<li role="menuitem"><a href="">All</a></li>
+					<li role="menuitem"><a href="">Untrack</a></li>
+					<li role="menuitem"><a href="">Unfriend</a></li>
+					<li role="menuitem"><a href="">Message</a></li>
+				</ul>
+			</div>
+			<button id="split-button" type="button" class="btn" ng-click="isAddForm()">Add</button>
+			<button id="split-button" type="button" class="btn" ng-click="isImportForm()">Import</button>
+			<button id="split-button" type="button" class="btn" ng-click="isUploadForm()">Upload</button>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right" style="padding: 6px 15px 0;">
+			<!-- <a href="" ng-click="showAdvanceSearch = !showAdvanceSearch">Search Advance?</a> &nbsp; -->
+			<a href="" ui-sref="catalog.browse">Browse Catalog?</a> &nbsp;
+			<a href="" class="list-grid-btn list-btn" ng-class="{'active': show_list_view}" ng-click="listView()"><i class="fa fa-list"></i></a><a href="" class="list-grid-btn grid-btn" ng-class="{'active': !show_list_view}" ng-click="gridView()"><i class="fa fa-th"></i></a>
+		</div>
+	</div>
+</div>
+<!-- Add Form div starts -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 result-share-box share-box-col" ng-show="show_add_form">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding share-div add-div">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 share-text-col">
+			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 no-padding">
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+					<label class="col-sm-2 control-label">Name</label>
+					<div class="col-sm-10 input-col">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+					<label class="col-sm-2 control-label">Entity</label>
+					<div class="col-sm-10 input-col">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+					<label class="col-sm-2 control-label">Designation</label>
+					<div class="col-sm-10 input-col">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+					<label class="col-sm-2 control-label">Email</label>
+					<div class="col-sm-10 input-col">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+					<label class="col-sm-2 control-label">Mobile</label>
+					<div class="col-sm-10 input-col">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-btns bottom-action submit-btn">
+					<button class="btn">Submit</button>
+					<button class="btn">Add Another</button>
+					<button class="btn">Reset</button>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 no-padding">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding added-tags">
+					<span>ankit.jiwani92@gmail.com <i class="fa fa-times pull-right"></i></span>
+					<span>Ankit Jiwani <i class="fa fa-times pull-right"></i></span>
+					<span>Bhavesh Vora <i class="fa fa-times pull-right"></i></span>
+					<span>Hiren Kesariya <i class="fa fa-times pull-right"></i></span>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right action-btns bottom-action diary-form-action">
+			<!-- <button class="btn">Submit</button> -->
+			<!-- <button class="btn">Reset</button> -->
+			<button class="btn">Invite</button>
+		</div>
+	</div>
+</div>
+<!-- Add Form div Ends -->
+<!-- Import Form Starts -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 result-share-box share-box-col" ng-show="show_import_form">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding share-div import-div">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 share-text-col">
+			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 no-padding">
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+					<label class="col-sm-2 control-label">Agent</label>
+					<div class="col-sm-10 input-col">
+						<select class="form-control">
+							<option>Google</option>
+							<option>Facebook</option>
+							<option>LinkedIn</option>
+							<option>Twitter</option>
+							<option>Outlook</option>
+							<option>iCloud</option>
+							<option>Yahoo</option>
+							<option>Others</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+					<label class="col-sm-2 control-label">User ID</label>
+					<div class="col-sm-10 input-col">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+					<label class="col-sm-2 control-label">Password</label>
+					<div class="col-sm-10 input-col">
+						<input type="password" class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 no-padding">
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+					<!-- <label class="col-sm-2 control-label">Email</label> -->
+					<div class="col-sm-12 input-col">
+						<input type="radio" name="import" style="height: auto;"> Import All and Overwrite <br>
+						<input type="radio" name="import" style="height: auto;"> Import New Only
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-btns bottom-action submit-btn">
+					<button class="btn">Submit</button>
+					<button class="btn">Reset</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right action-btns bottom-action diary-form-action">
+			<!-- <button class="btn">Submit</button> -->
+			<!-- <button class="btn">Reset</button> -->
+			<button class="btn">Invite</button>
+		</div>
+	</div>
+</div>
+<!-- Import Form Ends -->
+<!-- Upload Form Starts -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 result-share-box share-box-col" ng-show="show_upload_form">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding share-div upload-div">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 share-text-col">
+			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 no-padding">
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+					<label class="col-sm-2 control-label">Source</label>
+					<div class="col-sm-10 input-col">
+						<select class="form-control">
+							<option>Desktop</option>
+							<option>Tab</option>
+							<option>Mobile</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+					<label class="col-sm-2 control-label">File <i class="fa fa-info-circle cursor-pointer file-information" uib-tooltip="File type"></i></label>
+					<div class="col-sm-10 input-col">
+						<input type="file" class="form-control">
+						<p class="note">Note: <a href="">Download</a> Sample File</p>
+					</div>
+				</div>				
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 no-padding">
+				<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+					<!-- <label class="col-sm-2 control-label">Email</label> -->
+					<div class="col-sm-12 input-col">
+						<input type="radio" name="import" style="height: auto;"> Import All and Overwrite <br>
+						<input type="radio" name="import" style="height: auto;"> Import New Only
+					</div>
+				</div>
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-btns bottom-action submit-btn">
+					<button class="btn">Submit</button>
+					<button class="btn">Reset</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-right action-btns bottom-action diary-form-action">
+			<!-- <button class="btn">Submit</button> -->
+			<!-- <button class="btn">Reset</button> -->
+			<button class="btn">Invite</button>
+		</div>
+	</div>
+</div>
+<!-- Upload Form Ends -->
+<!-- Contact List -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-list-section">
+	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-col">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact-div">
+			<div class="image-div pull-left">
+				<img src="../app/images/bhavesh-vora.jpg" class="full-width">
+				<input type="checkbox" class="select-contact-checkbox">
+			</div>
+			<div class="contact-detail">
+				<div class="btn-group pull-right" uib-dropdown>
+					<i id="list-button" type="button" uib-dropdown-toggle ng-disabled="disabled" class="fa fa-chevron-down"></i>
+					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="list-button">
+						<li role="menuitem"><a href="">Untrack</a></li>
+						<li role="menuitem"><a href="">Unfriend</a></li>
+						<li role="menuitem"><a href="">Message</a></li>
+					</ul>
+				</div>
+				<h4><a href="">List Name</a></h4>
+				<p class="on-findoo-p"><span>Online</span></p>
+				<p class="on-findoo-p"><span>Personal</span>, <span>Work</span>, <span>Social</span></p>
+				<!-- <p class="lists-p"><a href="">Family</a></p> -->
+				<p class="counts-p">
+					<span uib-tooltip="Trackers"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> 456, </span>
+					<span uib-tooltip="Contacts"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i> 789, </span>
+					<span uib-tooltip="Tracking"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i> 123</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-col">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact-div">
+			<div class="image-div pull-left">
+				<img src="../app/images/bhavesh-vora.jpg" class="full-width">
+				<input type="checkbox" class="select-contact-checkbox">
+			</div>
+			<div class="contact-detail">
+				<div class="btn-group pull-right" uib-dropdown>
+					<i id="list-button" type="button" uib-dropdown-toggle ng-disabled="disabled" class="fa fa-chevron-down"></i>
+					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="list-button">
+						<li role="menuitem"><a href="">Untrack</a></li>
+						<li role="menuitem"><a href="">Unfriend</a></li>
+						<li role="menuitem"><a href="">Message</a></li>
+					</ul>
+				</div>
+				<h4><a href="">List Name</a></h4>
+				<p class="on-findoo-p"><span>Online</span></p>
+				<p class="on-findoo-p"><span>Personal</span>, <span>Work</span>, <span>Social</span></p>
+				<!-- <p class="lists-p"><a href="">Family</a></p> -->
+				<p class="counts-p">
+					<span uib-tooltip="Trackers"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> 456, </span>
+					<span uib-tooltip="Contacts"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i> 789, </span>
+					<span uib-tooltip="Tracking"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i> 123</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-col">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact-div">
+			<div class="image-div pull-left">
+				<img src="../app/images/bhavesh-vora.jpg" class="full-width">
+				<input type="checkbox" class="select-contact-checkbox">
+			</div>
+			<div class="contact-detail">
+				<div class="btn-group pull-right" uib-dropdown>
+					<i id="list-button" type="button" uib-dropdown-toggle ng-disabled="disabled" class="fa fa-chevron-down"></i>
+					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="list-button">
+						<li role="menuitem"><a href="">Untrack</a></li>
+						<li role="menuitem"><a href="">Unfriend</a></li>
+						<li role="menuitem"><a href="">Message</a></li>
+					</ul>
+				</div>
+				<h4><a href="">List Name</a></h4>
+				<p class="on-findoo-p"><span>Online</span></p>
+				<p class="on-findoo-p"><span>Personal</span>, <span>Work</span>, <span>Social</span></p>
+				<!-- <p class="lists-p"><a href="">Family</a></p> -->
+				<p class="counts-p">
+					<span uib-tooltip="Trackers"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> 456, </span>
+					<span uib-tooltip="Contacts"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i> 789, </span>
+					<span uib-tooltip="Tracking"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i> 123</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-col">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact-div">
+			<div class="image-div pull-left">
+				<img src="../app/images/bhavesh-vora.jpg" class="full-width">
+				<input type="checkbox" class="select-contact-checkbox">
+			</div>
+			<div class="contact-detail">
+				<div class="btn-group pull-right" uib-dropdown>
+					<i id="list-button" type="button" uib-dropdown-toggle ng-disabled="disabled" class="fa fa-chevron-down"></i>
+					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="list-button">
+						<li role="menuitem"><a href="">Untrack</a></li>
+						<li role="menuitem"><a href="">Unfriend</a></li>
+						<li role="menuitem"><a href="">Message</a></li>
+					</ul>
+				</div>
+				<h4><a href="">List Name</a></h4>
+				<p class="on-findoo-p"><span>Online</span></p>
+				<p class="on-findoo-p"><span>Personal</span>, <span>Work</span>, <span>Social</span></p>
+				<!-- <p class="lists-p"><a href="">Family</a></p> -->
+				<p class="counts-p">
+					<span uib-tooltip="Trackers"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> 456, </span>
+					<span uib-tooltip="Contacts"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i> 789, </span>
+					<span uib-tooltip="Tracking"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i> 123</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-col">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact-div">
+			<div class="image-div pull-left">
+				<img src="../app/images/bhavesh-vora.jpg" class="full-width">
+				<input type="checkbox" class="select-contact-checkbox">
+			</div>
+			<div class="contact-detail">
+				<div class="btn-group pull-right" uib-dropdown>
+					<i id="list-button" type="button" uib-dropdown-toggle ng-disabled="disabled" class="fa fa-chevron-down"></i>
+					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="list-button">
+						<li role="menuitem"><a href="">Untrack</a></li>
+						<li role="menuitem"><a href="">Unfriend</a></li>
+						<li role="menuitem"><a href="">Message</a></li>
+					</ul>
+				</div>
+				<h4><a href="">List Name</a></h4>
+				<p class="on-findoo-p"><span>Online</span></p>
+				<p class="on-findoo-p"><span>Personal</span>, <span>Work</span>, <span>Social</span></p>
+				<!-- <p class="lists-p"><a href="">Family</a></p> -->
+				<p class="counts-p">
+					<span uib-tooltip="Trackers"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> 456, </span>
+					<span uib-tooltip="Contacts"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i> 789, </span>
+					<span uib-tooltip="Tracking"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i> 123</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 contact-col">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact-div">
+			<div class="image-div pull-left">
+				<img src="../app/images/bhavesh-vora.jpg" class="full-width">
+				<input type="checkbox" class="select-contact-checkbox">
+			</div>
+			<div class="contact-detail">
+				<div class="btn-group pull-right" uib-dropdown>
+					<i id="list-button" type="button" uib-dropdown-toggle ng-disabled="disabled" class="fa fa-chevron-down"></i>
+					<ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="list-button">
+						<li role="menuitem"><a href="">Untrack</a></li>
+						<li role="menuitem"><a href="">Unfriend</a></li>
+						<li role="menuitem"><a href="">Message</a></li>
+					</ul>
+				</div>
+				<h4><a href="">List Name</a></h4>
+				<p class="on-findoo-p"><span>Online</span></p>
+				<p class="on-findoo-p"><span>Personal</span>, <span>Work</span>, <span>Social</span></p>
+				<!-- <p class="lists-p"><a href="">Family</a></p> -->
+				<p class="counts-p">
+					<span uib-tooltip="Trackers"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i> 456, </span>
+					<span uib-tooltip="Contacts"><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i> 789, </span>
+					<span uib-tooltip="Tracking"><i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i> 123</span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

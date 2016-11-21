@@ -1,1 +1,1580 @@
-<h1>map</h1>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-products-col">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding search-found">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 action-btns no-border" style="padding: 0; margin-bottom: 15px;">
+            <button class="btn" ui-sref="search.home.list"><i class="fa fa-chevron-left"></i> Go Back</button>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right" style="padding: 6px 15px 0;">
+            <a href="" class="list-grid-btn list-btn" ng-class="{'active': show_list_view}" ng-click="listView()"><i class="fa fa-list"></i></a><a href="" class="list-grid-btn grid-btn" ng-class="{'active': !show_list_view}" ng-click="gridView()"><i class="fa fa-th"></i></a>
+        </div>
+    </div>
+</div>
+<div class="profile-detail col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 profile-sec no-bottom-margin">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <div class="profile-image">
+                <img src="app/images/bhavesh-vora.jpg" alt="placeholder" />
+                <i class="fa fa-camera profile-image-icon" ng-click="show_camera = !show_camera"></i>
+                <div class="noti-div message-popup notifications-popup other-links camera-popup" ng-show="show_camera">
+                    <div class="heading">
+                        <h5>Choose</h5>
+                    </div>
+                    <div class="heading">
+                        <h5>Upload</h5>
+                    </div>
+                    <div class="heading">
+                        <h5>Reposition</h5>
+                    </div>
+                    <div class="heading">
+                        <h5>Remove</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span class="glyphicon glyphicon-star-empty"></span>
+                <span>4.46/255</span>
+            </div>
+            <i class="fa fa-camera cover-img-icon" ng-click="show_cover_image = !show_cover_image"></i>
+            <div class="noti-div message-popup notifications-popup other-links camera-popup cover-camera" ng-show="show_cover_image">
+                <div class="heading">
+                    <h5>Choose</h5>
+                </div>
+                <div class="heading">
+                    <h5>Upload</h5>
+                </div>
+                <div class="heading">
+                    <h5>Reposition</h5>
+                </div>
+                <div class="heading">
+                    <h5>Remove</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 user-details">
+            <h3 class="profile-name"><a href="#">Bhavesh Vora</a> <a href="" class="seal">Verified</a> <a href="" class="seal">Trusted</a></h3>
+            <div class="dropdown down-arrow" dropdown="" is-open="isopen">
+                <button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="true" style="background: transparent; outline: none;"> <span class="glyphicon glyphicon-menu-down"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="">Edit</a></li>
+                    <li role="separator" class="divider no-top-margin no-bottom-margin"></li>
+                    <li><a href="">Report</a></li>
+                    <li><a href="">Block</a></li>
+                </ul>
+            </div>
+            <p class="tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <ul class="row pockets no-border no-top-margin">
+                <li class="col-md-12">
+                    <a href="#">Pocket 1</a>
+                    <a href="#">Pocket 2</a>
+                    <a href="#">Pocket 3</a>
+                    <a href="#">Pocket 4</a>
+                    <a href="#">Pocket 5</a>
+                    <a href="#">Pocket 6</a>
+                </li>
+            </ul>
+            <a href="#">More...</a>
+            <div class="address no-border no-top-margin">
+                <span class="glyphicon glyphicon-map-marker"></span>
+                <address>City, State, Country</address>
+            </div>
+            <ul class="row review-section action-btns profile-action-btns">
+                <!-- <li class="col-md-4">
+                    
+                </li> -->
+                <li>
+                    <!-- <a href=""><span class="glyphicon glyphicon-thumbs-up"></span>Verified</a> -->
+                    <button class="btn"><i class="fa fa-eye"></i> View (265)</button>
+                </li>
+                <li>
+                    <!-- <a href=""><span class="glyphicon glyphicon-thumbs-up"></span>Verified</a> -->
+                    <button class="btn"><i class="fa fa-map-marker"></i> Track (265)</button>
+                </li>
+                <li>
+                    <!-- <a href=""><span class="glyphicon glyphicon-ok-sign"></span>Trusted</a> -->
+                    <button class="btn"><i class="fa fa-connectdevelop"></i> Connect (265)</button>
+                </li>
+                <li>
+                    <!-- <a href=""><span class="glyphicon glyphicon-thumbs-up"></span>Verified</a> -->
+                    <button class="btn"><i class="fa fa-hand-o-right"></i> Refer (265)</button>
+                </li>
+                <!-- <li>
+                    <a href=""><span class="glyphicon glyphicon-thumbs-up"></span>Verified</a>
+                    <button class="btn"><i class="fa fa-star-o"></i> Review (265)</button>
+                </li> -->
+                <li>
+                    <!-- <a href=""><span class="glyphicon glyphicon-circle-arrow-down"></span>Seal 3</a> -->
+                    <button class="btn"><i class="fa fa-envelope"></i> Message</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="row video-sec">
+        
+    
+    </div> -->
+    <div class="main-tab top-tab col-lg-12 col-md-12 col-sm-12 col-xs-12 profile-detail-tabs">
+        <div class="tab-section">
+            <ul class="nav nav-tabs main-nav" role="tablist" ng-init="innerTab = 1">
+                <li role="presentation" ng-class="{'active': innerTab == 1}"><a href="" ng-click="innerTab = 1" aria-controls="home" role="tab" data-toggle="tab">Overview</a></li>
+                <li role="presentation" ng-class="{'active': innerTab == 2}"><a href="" ng-click="innerTab = 2" aria-controls="profile" role="tab" data-toggle="tab">Crate</a></li>
+                <li role="presentation" ng-class="{'active': innerTab == 3}"><a href="" ng-click="innerTab = 3" aria-controls="messages" role="tab" data-toggle="tab">Feed</a></li>
+                <li role="presentation" ng-class="{'active': innerTab == 4}"><a href="" ng-click="innerTab = 4" aria-controls="messages" role="tab" data-toggle="tab">Heap</a></li>
+                <li role="presentation" ng-class="{'active': innerTab == 5}"><a href="" ng-click="innerTab = 5" aria-controls="messages" role="tab" data-toggle="tab">Jobs</a></li>
+                <li role="presentation" ng-class="{'active': innerTab == 6}"><a href="" ng-click="innerTab = 6" aria-controls="messages" role="tab" data-toggle="tab">Events</a></li>
+                <li role="presentation" ng-class="{'active': innerTab == 7}"><a href="" ng-click="innerTab = 7" aria-controls="messages" role="tab" data-toggle="tab">Reviews</a></li>
+            </ul>
+        </div>
+        <div class="tab-content col-lg-12 col-md-12 col-sm-12 col-xs-12 slider-col no-padding">
+            <!-- Overview Tab Starts -->
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 1}">
+                <div class="sub-tab">
+                    <div class="sec-title">
+                        <h2>Overview</h2>
+                    </div>
+                    <div class="tab-section sub-tab-section">
+                        <!-- <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">General</a></li>
+                            <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">KYC</a></li>
+                            <li role="presentation"><a href="#family" aria-controls="profile" role="tab" data-toggle="tab">Family</a></li>
+                        </ul> -->
+                        <!-- <div class="tab-content clearfix">
+                            <div role="tabpanel" class="tab-pane active login" id="general">
+                                <div class="row video-sec">
+                                    <div class="col-md-12">
+                                        <div class="video-box">
+                                            <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row content-profile">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>Age: 42Yrs 3Mth</li>
+                                            <li>Relationship: Single</li>
+                                            <li>Origin: Country Name</li>
+                                            <li>Tax Status: NRI</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>Gender: Male</li>
+                                            <li>Occupation: Job</li>
+                                            <li>Resident: Country Name</li>
+                                            <li>Tax Status: Foreigner PR</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="content-detail">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                    <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane register" id="kyc">
+                                k
+                            </div>
+                            <div role="tabpanel" class="tab-pane register" id="family">
+                                F
+                            </div>
+                        </div> -->
+                        <uib-tabset>
+                            <uib-tab heading="General" >
+                                <div class="item owl-carousel owl-theme overview-carousel">
+                                    <div class="row video-sec" style="margin: 0;">
+                                        <div class="col-md-12">
+                                            <div class="video-box">
+                                                <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Age: 42Yrs 3Mth</li>
+                                                <li>Relationship: Single</li>
+                                                <li>Origin: Country Name</li>
+                                                <li>Tax Status: NRI</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Gender: Male</li>
+                                                <li>Occupation: Job</li>
+                                                <li>Resident: Country Name</li>
+                                                <li>Tax Status: Foreigner PR</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 content-detail">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                            <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row video-sec" style="margin: 0;">
+                                        <div class="col-md-12">
+                                            <div class="video-box">
+                                                <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Age: 42Yrs 3Mth</li>
+                                                <li>Relationship: Single</li>
+                                                <li>Origin: Country Name</li>
+                                                <li>Tax Status: NRI</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Gender: Male</li>
+                                                <li>Occupation: Job</li>
+                                                <li>Resident: Country Name</li>
+                                                <li>Tax Status: Foreigner PR</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 content-detail">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                            <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row video-sec" style="margin: 0;">
+                                        <div class="col-md-12">
+                                            <div class="video-box">
+                                                <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Age: 42Yrs 3Mth</li>
+                                                <li>Relationship: Single</li>
+                                                <li>Origin: Country Name</li>
+                                                <li>Tax Status: NRI</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Gender: Male</li>
+                                                <li>Occupation: Job</li>
+                                                <li>Resident: Country Name</li>
+                                                <li>Tax Status: Foreigner PR</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 content-detail">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                            <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </uib-tab>
+                            <uib-tab heading="KYC">
+                              <div class="item owl-carousel owl-theme overview-carousel">
+                                    <div class="row video-sec" style="margin: 0;">
+                                        <div class="col-md-12">
+                                            <div class="video-box">
+                                                <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Age: 42Yrs 3Mth</li>
+                                                <li>Relationship: Single</li>
+                                                <li>Origin: Country Name</li>
+                                                <li>Tax Status: NRI</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Gender: Male</li>
+                                                <li>Occupation: Job</li>
+                                                <li>Resident: Country Name</li>
+                                                <li>Tax Status: Foreigner PR</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 content-detail">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                            <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row video-sec" style="margin: 0;">
+                                        <div class="col-md-12">
+                                            <div class="video-box">
+                                                <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Age: 42Yrs 3Mth</li>
+                                                <li>Relationship: Single</li>
+                                                <li>Origin: Country Name</li>
+                                                <li>Tax Status: NRI</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Gender: Male</li>
+                                                <li>Occupation: Job</li>
+                                                <li>Resident: Country Name</li>
+                                                <li>Tax Status: Foreigner PR</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 content-detail">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                            <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row video-sec" style="margin: 0;">
+                                        <div class="col-md-12">
+                                            <div class="video-box">
+                                                <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Age: 42Yrs 3Mth</li>
+                                                <li>Relationship: Single</li>
+                                                <li>Origin: Country Name</li>
+                                                <li>Tax Status: NRI</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Gender: Male</li>
+                                                <li>Occupation: Job</li>
+                                                <li>Resident: Country Name</li>
+                                                <li>Tax Status: Foreigner PR</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 content-detail">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                            <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </uib-tab>
+                            <uib-tab heading="Family">
+                              <div class="item owl-carousel owl-theme overview-carousel">
+                                    <div class="row video-sec" style="margin: 0;">
+                                        <div class="col-md-12">
+                                            <div class="video-box">
+                                                <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Age: 42Yrs 3Mth</li>
+                                                <li>Relationship: Single</li>
+                                                <li>Origin: Country Name</li>
+                                                <li>Tax Status: NRI</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Gender: Male</li>
+                                                <li>Occupation: Job</li>
+                                                <li>Resident: Country Name</li>
+                                                <li>Tax Status: Foreigner PR</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 content-detail">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                            <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row video-sec" style="margin: 0;">
+                                        <div class="col-md-12">
+                                            <div class="video-box">
+                                                <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Age: 42Yrs 3Mth</li>
+                                                <li>Relationship: Single</li>
+                                                <li>Origin: Country Name</li>
+                                                <li>Tax Status: NRI</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Gender: Male</li>
+                                                <li>Occupation: Job</li>
+                                                <li>Resident: Country Name</li>
+                                                <li>Tax Status: Foreigner PR</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 content-detail">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                            <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row video-sec" style="margin: 0;">
+                                        <div class="col-md-12">
+                                            <div class="video-box">
+                                                <img src="http://placehold.it/755x350" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Age: 42Yrs 3Mth</li>
+                                                <li>Relationship: Single</li>
+                                                <li>Origin: Country Name</li>
+                                                <li>Tax Status: NRI</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Gender: Male</li>
+                                                <li>Occupation: Job</li>
+                                                <li>Resident: Country Name</li>
+                                                <li>Tax Status: Foreigner PR</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-12 content-detail">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                            <p>Nunc in turpis id libero ultrices interdum. Maecenas aliquam ornare consequat. Morbi quis odio venenatis nulla venenatis consequat.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </uib-tab>
+                        </uib-tabset>
+                    </div>
+                </div>
+                <div class="sub-tab">
+                    <div class="sec-title">
+                        <h2>Experience (15Yrs 6Mth)</h2>
+                    </div>
+                    <!-- <div class="tab-section">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">Professional (10yrs 2Mth)</a></li>
+                            <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Social (10yrs 2Mth)</a></li>
+                        </ul>
+                        <div class="tab-content clearfix">
+                            <div role="tabpanel" class="tab-pane active login" id="general">
+                                <div class="row content-profile">
+                                    <div class="col-md-9">
+                                        <ul>
+                                            <li>Designation</li>
+                                            <li>Entety/ Profile Name</li>
+                                            <li>Period: 10-2005 to 12-2015</li>
+                                            <li>Location: Area, City, State, Country</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                                    </div>
+                                </div>
+                                <div class="content-detail">
+                                    <h4>KRA</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane register" id="kyc">
+                                k
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="tab-section sub-tab-section">
+                        <uib-tabset>
+                                <uib-tab heading="Professional 10Yrs 2Mth">
+                                    <div class="item owl-carousel owl-theme overview-carousel">
+                                        <div class="row content-profile" style="margin: 0;">
+                                            <div class="col-md-9">
+                                                <ul>
+                                                    <li>Designation</li>
+                                                    <li>Entety/ Profile Name</li>
+                                                    <li>Period: 10-2005 to 12-2015</li>
+                                                    <li>Location: Area, City, State, Country</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                            <div class="col-lg-12 content-detail">
+                                                <h4>KRA</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </uib-tab>
+                                <uib-tab heading="Social 10Yrs 2Mths">
+                                       <div class="item owl-carousel owl-theme overview-carousel">
+                                            <div class="row content-profile" style="margin: 0;">
+                                                <div class="col-md-9">
+                                                    <ul>
+                                                        <li>Designation</li>
+                                                        <li>Entety/ Profile Name</li>
+                                                        <li>Period: 10-2005 to 12-2015</li>
+                                                        <li>Location: Area, City, State, Country</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                                                </div>
+                                                <div class="col-lg-12 content-detail">
+                                                    <h4>KRA</h4>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet diam elementum vitae. Quisque at convallis sem, gravida tempor dolor. Sed commodo nisi non ligula viverra placerat. Sed tortor ipsum, cursus sit amet gravida sed, feugiat a tortor. Vivamus quis ante nec nibh sodales dictum malesuada id ante. Proin ex augue, placerat eu accumsan vitae, porttitor et nulla. Ut quis dui ipsum. Suspendisse vitae arcu tortor. Sed dolor tortor, efficitur eu sapien vitae, suscipit semper quam.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </uib-tab>
+                        </uib-tabset>
+                    </div>
+                </div>
+                <div class="sub-tab">
+                    <div class="sec-title">
+                        <h2>Skills (15)</h2>
+                    </div>
+                    <!-- <div class="tab-section">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">Personal (5)</a></li>
+                            <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">People (5)</a></li>
+                            <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Professional (5)</a></li>
+                        </ul>
+                        <div class="tab-content clearfix">
+                            <div role="tabpanel" class="tab-pane active login" id="general">
+                                <div class="row content-profile">
+                                    <div class="col-md-12">
+                                        <ul>
+                                            <li>Skill 1 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                            <li>Skill 2 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                            <li>Skill 3 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                            <li>Skill 4 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane register" id="kyc">
+                                k
+                            </div>
+                            <div role="tabpanel" class="tab-pane register" id="kyc">
+                                k
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="tab-section sub-tab-section">
+                        <uib-tabset>
+                                <uib-tab heading="Personal (5)">
+                                    <div class="item owl-carousel owl-theme overview-carousel">
+                                        <div class="row content-profile" style="margin: 0;">
+                                            <div class="col-md-12">
+                                                <ul>
+                                                    <li>Skill 1 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                    <li>Skill 2 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                    <li>Skill 3 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                    <li>Skill 4 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </uib-tab>
+                                <uib-tab heading="People (5)">
+                                       <div class="item owl-carousel owl-theme overview-carousel">
+                                            <div class="row content-profile" style="margin: 0;">
+                                                <div class="col-md-12">
+                                                    <ul>
+                                                        <li>Skill 1 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                        <li>Skill 2 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                        <li>Skill 3 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                        <li>Skill 4 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </uib-tab>
+                                <uib-tab heading="Professional (5)">
+                                    <div class="item owl-carousel owl-theme overview-carousel">
+                                        <div class="row content-profile" style="margin: 0;">
+                                            <div class="col-md-12">
+                                                <ul>
+                                                    <li>Skill 1 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                    <li>Skill 2 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                    <li>Skill 3 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                    <li>Skill 4 <a href="#">234 Praise</a> <a href="#" class="praise-align"><span class="glyphicon glyphicon-thumbs-up"></span> Praise</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </uib-tab>
+                        </uib-tabset>
+                    </div>
+                </div>
+                <div class="sub-tab">
+                    <div class="sec-title">
+                        <h2>Knowledge (5)</h2>
+                    </div>
+                    <!-- <div class="tab-section">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#general" aria-controls="home" role="tab" data-toggle="tab">Academic (2)</a></li>
+                            <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Professioanl (3)</a></li>
+                            <li role="presentation"><a href="#kyc" aria-controls="profile" role="tab" data-toggle="tab">Other (0)</a></li>
+                        </ul>
+                        <div class="tab-content clearfix">
+                            <div role="tabpanel" class="tab-pane active login" id="general">
+                                <div class="row content-profile">
+                                    <div class="col-md-9">
+                                        <ul>
+                                            <li>Course Name</li>
+                                            <li>Entety/ Profile Name</li>
+                                            <li>Period: 10-2005 to 12-2015</li>
+                                            <li>Location: Area, City, State, Country</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                                    </div>
+                                </div>
+                                <div class="content-detail">
+                                    <h4>KRA</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet.</p>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane register" id="kyc">
+                                k
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="tab-section sub-tab-section">
+                        <uib-tabset>
+                                <uib-tab heading="Academic (2)">
+                                    <div class="item owl-carousel owl-theme overview-carousel">
+                                        <div class="row content-profile" style="margin: 0;">
+                                            <div class="col-md-9">
+                                                <ul>
+                                                    <li>Course Name</li>
+                                                    <li>Entety/ Profile Name</li>
+                                                    <li>Period: 10-2005 to 12-2015</li>
+                                                    <li>Location: Area, City, State, Country</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                            <div class="col-lg-12 content-detail">
+                                                <h4>KRA</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </uib-tab>
+                                <uib-tab heading="Professional (3)">
+                                    <div class="item owl-carousel owl-theme overview-carousel">
+                                        <div class="row content-profile" style="margin: 0;">
+                                            <div class="col-md-9">
+                                                <ul>
+                                                    <li>Course Name</li>
+                                                    <li>Entety/ Profile Name</li>
+                                                    <li>Period: 10-2005 to 12-2015</li>
+                                                    <li>Location: Area, City, State, Country</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                            <div class="col-lg-12 content-detail">
+                                                <h4>KRA</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </uib-tab>
+                                <uib-tab heading="Other (0)">
+                                    <div class="item owl-carousel owl-theme overview-carousel">
+                                        <div class="row content-profile" style="margin: 0;">
+                                            <div class="col-md-9">
+                                                <ul>
+                                                    <li>Course Name</li>
+                                                    <li>Entety/ Profile Name</li>
+                                                    <li>Period: 10-2005 to 12-2015</li>
+                                                    <li>Location: Area, City, State, Country</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img src="http://placehold.it/150x150" alt="placeholder" class="img-responsive" />
+                                            </div>
+                                            <div class="col-lg-12 content-detail">
+                                                <h4>KRA</h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus ornare nibh, ut tempus mi ultricies eu. Ut vitae libero faucibus, auctor ante vel, sollicitudin justo. Vestibulum non rhoncus ipsum. Donec at dui non leo porta ultricies. Integer pretium felis purus, id auctor ante dictum vel. Pellentesque urna libero, commodo a lacus sit amet, cursus sodales arcu. Curabitur consequat porttitor leo, sit amet aliquet.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </uib-tab>
+                        </uib-tabset>
+                    </div>
+                </div>
+            </div>
+            <!-- Overview Tab Ends -->
+            <!-- Crate Tab Starts -->
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 2}">
+                <!-- Grid View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section" ng-show="!show_list_view">
+                    <!-- products -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <i class="fa fa-chevron-down down-arrow"></i>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                <div class="name-div">
+                                    <p class="by">by - <a>HDFC Mutual Fund </a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                                    <input type="text" class="form-control" placeholder="Name" style="width:50%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Email" style="width:48%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Mobile" style="width:50%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Address" style="width:48%; display: inline-block;">
+                                    <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea>
+                                    <button class="btn btn-default">Submit</button>
+                                    <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                                    <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                                    <button class="btn btn-default">Submit</button>
+                                    <button class="btn btn-default" ng-click="review()">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                <h4 ui-sref="search.products.detail">HDFC Super Equity Fund</h4>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                <p style="-webkit-line-clamp: 3;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding seals text-right">
+                                    <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding location">
+                                    <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding counts">
+                                    <p>
+                                        <i class="fa fa-eye"></i> 265 &nbsp;
+                                        <i class="fa fa-map-marker"></i> 265
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item-action">
+                                <p class="action-btns">
+                                    <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                    <button class="btn" ng-click="enquire()">Enquire</button>
+                                    <button class="btn" ng-click="review()">Review</button>
+                                </p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 refer-div">
+                                <span>Review:</span>
+                                <span class="pull-right"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- List View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section list-view-section" ng-show="show_list_view">
+                    <!-- Products -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <!-- <i class="fa fa-chevron-down down-arrow"></i> -->
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                    <div class="name-div">
+                                        <p class="by">by - <a>HDFC Mutual Fund </a></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                    <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                                        <input type="text" class="form-control" placeholder="Name" style="width:50%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Email" style="width:48%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Mobile" style="width:50%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Address" style="width:48%; display: inline-block;">
+                                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea>
+                                        <button class="btn btn-default">Submit</button>
+                                        <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                                        <button class="btn btn-default">Submit</button>
+                                        <button class="btn btn-default" ng-click="review()">Cancel</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                    <h4 ui-sref="search.products.detail">HDFC Super Equity Fund</h4>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                    <p style="-webkit-line-clamp: 5;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding location">
+                                    <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding seals">
+                                    <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding counts">
+                                    <p>
+                                        <i class="fa fa-eye"></i> 265 &nbsp;
+                                        <i class="fa fa-map-marker"></i> 265
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding action-col">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 item-action">
+                                    <p class="action-btns">
+                                        <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                        <button class="btn" ng-click="enquire()">Enquire</button>
+                                        <button class="btn" ng-click="review()">Review</button>
+                                    </p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 refer-div">
+                                    <input type="text" class="form-control" placeholder="Review">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Crate Tab Ends -->
+            <!-- Feed Tab Starts -->
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 3}">
+                <!-- Grid View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section" ng-show="!show_list_view">
+                    <!-- posts -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 cursor-pointer item-card-col post-card">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <i class="fa fa-chevron-down down-arrow"></i>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                <div class="name-div">
+                                    <p class="by">Article by - <a>Bhavesh Vora </a>
+                                        <span class="pull-right">1hr ago</span></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col"></div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                <h4>Lorem Ipsum is a dummy text</h4>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding ref">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                    <p>Ref: <a href="">2015/16/Compliance/IFA/ARN Renewal</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding link">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                    <p>Link: <a href="">abcdefghi.jklm/nopqrst//uvwxyz</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding link">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                    <p><i class="fa fa-map-marker"></i> CSIA Airport, Salt lake, Chennai </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item-action">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center action-btns">
+                                    <button class="btn">View</button>
+                                    <button class="btn">Wow</button>
+                                    <button class="btn">Refer</button>
+                                    <button class="btn">Review</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 refer-div">
+                                <span><i class="fa fa-hand-o-up"></i> Say:</span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- List View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section list-view-section" ng-show="show_list_view">
+                    <!-- Posts -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <!-- <i class="fa fa-chevron-down down-arrow"></i> -->
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                    <div class="name-div">
+                                        <p class="by">by - <a>Bhavesh Vora </a></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                    <h4>Lorem Ipsum is a dummy text</h4>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                    <p style="-webkit-line-clamp: 5;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding location">
+                                    <p><i class="fa fa-map-marker"></i> &nbsp; CSIA Airport, Salt lake, Chennai</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding seals">
+                                    <p>Ref: <a href="">2015/16/Compliance/IFA/ARN Renewal</a></p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding counts">
+                                    <p>Link:
+                                        <a href="">abcdefghi.jklm/nopqrst//uvwxyz</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding action-col">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 item-action">
+                                    <p class="action-btns">
+                                        <button class="btn">View</button>
+                                        <button class="btn">Wow</button>
+                                        <button class="btn">Refer</button>
+                                        <button class="btn">Review</button>
+                                    </p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 refer-div">
+                                    <input type="text" class="form-control" placeholder="Say">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Feed Tab Ends -->
+            <!-- Heap Tab Starts -->
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 4}">
+                <!-- Grid View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section" ng-show="!show_list_view">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <i class="fa fa-chevron-down down-arrow"></i>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                <div class="name-div">
+                                    <p class="by">by - <a>Findoo Solution LLP. </a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                                    <input type="text" class="form-control" placeholder="Name" style="width:50%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Email" style="width:48%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Mobile" style="width:50%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Address" style="width:48%; display: inline-block;">
+                                    <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea>
+                                    <button class="btn btn-default">Submit</button>
+                                    <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                                    <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                                    <button class="btn btn-default">Submit</button>
+                                    <button class="btn btn-default" ng-click="review()">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                <h4 ui-sref="search.services.detail">Service Title</h4>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                <p style="-webkit-line-clamp: 3;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding seals text-right">
+                                    <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding location">
+                                    <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding counts">
+                                    <p>
+                                        <i class="fa fa-eye"></i> 265 &nbsp;
+                                        <i class="fa fa-map-marker"></i> 265
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item-action">
+                                <p class="action-btns">
+                                    <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                    <button class="btn" ng-click="enquire()">Enquire</button>
+                                    <button class="btn" ng-click="review()">Review</button>
+                                </p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 refer-div">
+                                <span>Review:</span>
+                                <span class="pull-right"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- List View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section list-view-section" ng-show="show_list_view">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <!-- <i class="fa fa-chevron-down down-arrow"></i> -->
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                    <div class="name-div">
+                                        <p class="by">by - <a>Findoo Solution LLP. </a></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                    <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                                        <input type="text" class="form-control" placeholder="Name" style="width:50%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Email" style="width:48%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Mobile" style="width:50%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Address" style="width:48%; display: inline-block;">
+                                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea>
+                                        <button class="btn btn-default">Submit</button>
+                                        <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                                        <button class="btn btn-default">Submit</button>
+                                        <button class="btn btn-default" ng-click="review()">Cancel</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                    <h4 ui-sref="search.services.detail">Service Title</h4>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                    <p style="-webkit-line-clamp: 5;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding location">
+                                    <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding seals">
+                                    <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding counts">
+                                    <p>
+                                        <i class="fa fa-eye"></i> 265 &nbsp;
+                                        <i class="fa fa-map-marker"></i> 265
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding action-col">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 item-action">
+                                    <p class="action-btns">
+                                        <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                        <button class="btn" ng-click="enquire()">Enquire</button>
+                                        <button class="btn" ng-click="review()">Review</button>
+                                    </p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 refer-div">
+                                    <input type="text" class="form-control" placeholder="Review">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Heap Tab Ends -->
+            <!-- Jobs Tab Starts -->
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 5}">
+                <!-- Grid View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section" ng-show="!show_list_view">
+                    <!-- jobs -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <i class="fa fa-chevron-down down-arrow"></i>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                <div class="name-div">
+                                    <p class="by">by - <a>HDFC Mutual Fund </a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                                    <input type="text" class="form-control" placeholder="Name" style="width:50%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Email" style="width:48%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Mobile" style="width:50%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Address" style="width:48%; display: inline-block;">
+                                    <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea>
+                                    <button class="btn btn-default">Submit</button>
+                                    <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                                    <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                                    <button class="btn btn-default">Submit</button>
+                                    <button class="btn btn-default" ng-click="review()">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                <h4 ui-sref="search.jobs.detail">Job Title</h4>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                <p style="-webkit-line-clamp: 3;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding seals text-right">
+                                    <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding location">
+                                    <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding counts">
+                                    <p>
+                                        <i class="fa fa-eye"></i> 265 &nbsp;
+                                        <i class="fa fa-map-marker"></i> 265
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item-action">
+                                <p class="action-btns">
+                                    <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                    <button class="btn" ng-click="enquire()">Enquire</button>
+                                    <button class="btn" ng-click="review()">Review</button>
+                                </p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 refer-div">
+                                <span>Review:</span>
+                                <span class="pull-right"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- List View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section list-view-section" ng-show="show_list_view">
+                    <!-- Jobs -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <!-- <i class="fa fa-chevron-down down-arrow"></i> -->
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                    <div class="name-div">
+                                        <p class="by">by - <a>HDFC Mutual Fund </a></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                    <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                                        <input type="text" class="form-control" placeholder="Name" style="width:50%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Email" style="width:48%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Mobile" style="width:50%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Address" style="width:48%; display: inline-block;">
+                                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea>
+                                        <button class="btn btn-default">Submit</button>
+                                        <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                                        <button class="btn btn-default">Submit</button>
+                                        <button class="btn btn-default" ng-click="review()">Cancel</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                    <h4 ui-sref="search.jobs.detail">Job Title</h4>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                    <p style="-webkit-line-clamp: 5;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding location">
+                                    <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding seals">
+                                    <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding counts">
+                                    <p>
+                                        <i class="fa fa-eye"></i> 265 &nbsp;
+                                        <i class="fa fa-map-marker"></i> 265
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding action-col">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 item-action">
+                                    <p class="action-btns">
+                                        <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                        <button class="btn" ng-click="enquire()">Enquire</button>
+                                        <button class="btn" ng-click="review()">Review</button>
+                                    </p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 refer-div">
+                                    <input type="text" class="form-control" placeholder="Review">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Jobs Tab Ends -->
+            <!-- Events Tab Starts -->
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 6}">
+                <!-- Grid View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section" ng-show="!show_list_view">
+                    <!-- events -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <i class="fa fa-chevron-down down-arrow"></i>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                <div class="name-div">
+                                    <p class="by">by - <a>HDFC Mutual Fund </a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                                    <input type="text" class="form-control" placeholder="Name" style="width:50%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Email" style="width:48%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Mobile" style="width:50%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Address" style="width:48%; display: inline-block;">
+                                    <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea>
+                                    <button class="btn btn-default">Submit</button>
+                                    <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                                    <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                                    <button class="btn btn-default">Submit</button>
+                                    <button class="btn btn-default" ng-click="review()">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                <h4 ui-sref="search.events.detail">Event Title</h4>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                <p style="-webkit-line-clamp: 3;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding seals text-right">
+                                    <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding location">
+                                    <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding counts">
+                                    <p>
+                                        <i class="fa fa-eye"></i> 265 &nbsp;
+                                        <i class="fa fa-map-marker"></i> 265
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item-action">
+                                <p class="action-btns">
+                                    <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                    <button class="btn" ng-click="enquire()">Enquire</button>
+                                    <button class="btn" ng-click="review()">Review</button>
+                                </p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 refer-div">
+                                <span>Review:</span>
+                                <span class="pull-right"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- List View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section list-view-section" ng-show="show_list_view">
+                    <!-- Events -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <!-- <i class="fa fa-chevron-down down-arrow"></i> -->
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                    <div class="name-div">
+                                        <p class="by">by - <a>HDFC Mutual Fund </a></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                    <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                                        <input type="text" class="form-control" placeholder="Name" style="width:50%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Email" style="width:48%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Mobile" style="width:50%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Address" style="width:48%; display: inline-block;">
+                                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea>
+                                        <button class="btn btn-default">Submit</button>
+                                        <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                                        <button class="btn btn-default">Submit</button>
+                                        <button class="btn btn-default" ng-click="review()">Cancel</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                    <h4 ui-sref="search.events.detail">Event Title</h4>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                    <p style="-webkit-line-clamp: 5;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding location">
+                                    <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding seals">
+                                    <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding counts">
+                                    <p>
+                                        <i class="fa fa-eye"></i> 265 &nbsp;
+                                        <i class="fa fa-map-marker"></i> 265
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding action-col">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 item-action">
+                                    <p class="action-btns">
+                                        <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                        <button class="btn" ng-click="enquire()">Enquire</button>
+                                        <button class="btn" ng-click="review()">Review</button>
+                                    </p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 refer-div">
+                                    <input type="text" class="form-control" placeholder="Review">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Jobs Tab Ends -->
+            <!-- Reviews Tab Starts -->
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 7}">
+                <!-- Grid View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section" ng-show="!show_list_view">
+                    <!-- products -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <i class="fa fa-chevron-down down-arrow"></i>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                <div class="name-div">
+                                    <p class="by">by - <a>HDFC Mutual Fund </a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                                    <input type="text" class="form-control" placeholder="Name" style="width:50%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Email" style="width:48%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Mobile" style="width:50%; display: inline-block;">
+                                    <input type="text" class="form-control" placeholder="Address" style="width:48%; display: inline-block;">
+                                    <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea>
+                                    <button class="btn btn-default">Submit</button>
+                                    <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                                    <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                                    <button class="btn btn-default">Submit</button>
+                                    <button class="btn btn-default" ng-click="review()">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                <h4 ui-sref="search.products.detail">HDFC Super Equity Fund</h4>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                <p style="-webkit-line-clamp: 3;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding seals text-right">
+                                    <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding location">
+                                    <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding counts">
+                                    <p>
+                                        <i class="fa fa-eye"></i> 265 &nbsp;
+                                        <i class="fa fa-map-marker"></i> 265
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item-action">
+                                <p class="action-btns">
+                                    <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                    <button class="btn" ng-click="enquire()">Enquire</button>
+                                    <button class="btn" ng-click="review()">Review</button>
+                                </p>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 refer-div">
+                                <span>Review:</span>
+                                <span class="pull-right"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- List View -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section list-view-section" ng-show="show_list_view">
+                    <!-- Products -->
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cursor-pointer item-card-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                            <!-- <i class="fa fa-chevron-down down-arrow"></i> -->
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                                    <div class="name-div">
+                                        <p class="by">by - <a>HDFC Mutual Fund </a></p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                                    <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                                        <input type="text" class="form-control" placeholder="Name" style="width:50%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Email" style="width:48%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Mobile" style="width:50%; display: inline-block;">
+                                        <input type="text" class="form-control" placeholder="Address" style="width:48%; display: inline-block;">
+                                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea>
+                                        <button class="btn btn-default">Submit</button>
+                                        <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center cover-col" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                                        <button class="btn btn-default">Submit</button>
+                                        <button class="btn btn-default" ng-click="review()">Cancel</button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <span>4.46/255</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                                    <h4 ui-sref="search.products.detail">HDFC Super Equity Fund</h4>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                                    <p style="-webkit-line-clamp: 5;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding location">
+                                    <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding seals">
+                                    <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding counts">
+                                    <p>
+                                        <i class="fa fa-eye"></i> 265 &nbsp;
+                                        <i class="fa fa-map-marker"></i> 265
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding action-col">
+                                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 item-action">
+                                    <p class="action-btns">
+                                        <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                        <button class="btn" ng-click="enquire()">Enquire</button>
+                                        <button class="btn" ng-click="review()">Review</button>
+                                    </p>
+                                </div>
+                                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 refer-div">
+                                    <input type="text" class="form-control" placeholder="Review">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Reviews Tab Ends -->
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+      $(".overview-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: false,
+        singleItem: true,
+        dots: true,
+        pagination: true
+      });
+  })
+</script>

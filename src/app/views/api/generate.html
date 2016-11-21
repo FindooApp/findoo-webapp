@@ -1,0 +1,69 @@
+<div class="row account-row">
+    <!-- Login and sigup Section Starts -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="text-center account-window">
+            <h1 class="logo" ui-sref="home"><span>Findoo</span></h1>
+            <h2>Register login API for your site</h2>
+            <p>Now, experience social approach in finance! You are signing in to Search</p>
+            <div class="tab-section">
+                <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div role="tabpanel" class="tab-pane register active" id="register">
+                        <form name="registrationForm" class="form-horizontal" ng-submit="!registrationForm.$invalid && doRegister()" novalidate>
+                            <h3 class="pull-left">Get Started - it's free</h3>
+                            <a href="#" class="pull-right">Need Help?</a>
+                            <span class="clearfix"></span>
+                            <div class="form-inline">
+                                <div class="form-group" ng-class="{'has-error' : registrationForm.app_name.$error.required && registrationForm.app_name.$dirty}" style="margin-right:2%;">
+                                    <label class="sr-only" for="">App Name</label>
+                                    <input type="text" class="form-control" name="app_name" placeholder="App Name" ng-required="registrationForm.app_name" ng-model="registration.app_name">
+                                </div>
+                                <div class="form-group" ng-class="{'has-error' : registrationForm.site_url.$error.required && registrationForm.site_url.$dirty}">
+                                    <label class="sr-only" for="">Site URL</label>
+                                    <input type="text" class="form-control" name="site_url" placeholder="Site URL" ng-required="registrationForm.site_url" ng-model="registration.site_url">
+                                </div>
+                            </div>
+                            <div vc-recaptcha key="'6Le36QgUAAAAALgarpNbE1YfpMxKyEO1Zc4IDCCZ'" ng-model="registration.myRecaptchaResponse"></div>
+                            <p class="text-center">By <a href="#">Signing up</a>, you agree to findoo’s <a href="#">terms and conditions</a></p>
+                            <button type="submit" ng-disabled="registrationForm.$invalid" class="btn btn-default btn-submit">Generate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer navbar-fixed-bottom">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding">
+            <ul class="nav nav-pills">
+                <li role="presentation"><a href="#">About</a></li>
+                <li role="presentation"><a href="#">Business</a></li>
+                <li role="presentation"><a href="#">Advertise</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center copy no-padding">
+            <span>&copy; 2015 Findoo</span>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding">
+            <ul class="nav nav-pills nav-right">
+                <li role="presentation"><a href="#">Support</a></li>
+                <li role="presentation"><a href="#">Privacy</a></li>
+                <li role="presentation"><a href="#">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Footer Section Ends -->
+</div>
+<script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>
+<!-- Window height -->
+<script>
+$(document).ready(function() {
+    function setHeight() {
+        windowHeight = $(window).innerHeight();
+        $('.account-row').css('min-height', windowHeight);
+    };
+    setHeight();
+    $(window).resize(function() {
+        setHeight();
+    });
+});
+</script>

@@ -1,0 +1,788 @@
+<div class="row header-sec">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 search-sec-top width-lg logo-col">
+        <!-- <h1 class="logo-main"><span>Findoo</span></h1> -->
+        <!-- <img src="../app/images/logo-main.png" ui-sref="home"> -->
+        <span class="logo-text" ui-sref="home">findoo</span>
+        <!-- <button type="button" ng-click="showNav=!showNav" class="btn header-bar hidden-sm" data-animation="am-slide-left" data-placement="left" bs-aside="aside"><span class="fa fa-bars"></span></button> -->
+    </div>
+    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 search-sec-top width-lg-search" style="padding: 5px 0 0;">
+        <div class="input-group">
+            <div class="btn-group" uib-dropdown>
+                <button id="result-button" type="button" class="btn search-for-btn" uib-dropdown-toggle ng-disabled="disabled">{{search_select}}
+                    <i class="fa fa-chevron-down"></i></button>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="result-button">
+                    <li role="menuitem"><a ui-sref="notification.list">All</a></li>
+                    <li role="menuitem"><a ui-sref="notification.status.list">Status</a></li>
+                    <li role="menuitem"><a ui-sref="notification.article.list">Article</a></li>
+                    <li role="menuitem"><a ui-sref="notification.circular.list">Circular</a></li>
+                    <li role="menuitem"><a ui-sref="notification.announcement.list">Announcement</a></li>
+                    <li role="menuitem"><a ui-sref="notification.call.list">Call</a></li>
+                    <li role="menuitem"><a ui-sref="notification.script.list">Script</a></li>
+                </ul>
+            </div>
+            <input type="text" class="form-control" placeholder="{{placeholder}}">
+            <i class="fa fa-chevron-down search-advance-arrow" ng-click="showAdvanceSearch = !showAdvanceSearch"></i>
+            <span class="input-group-btn search-btn">
+                <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+        <!-- /input-group -->
+        <!-- Advance Search -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-home-col search-advance-section" ng-show="showAdvanceSearch">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding slider-col">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hide-advance advance-search-col no-padding" ng-class="{'show-advance': showAdvanceSearch}">
+                        <h4>Advance Search</h4>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Item</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control">
+                                        <option>Lorem Ipsum</option>
+                                        <option>Lorem Ipsum</option>
+                                        <option>Lorem Ipsum</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Type</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control">
+                                        <option>Lorem Ipsum</option>
+                                        <option>Lorem Ipsum</option>
+                                        <option>Lorem Ipsum</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Category</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control">
+                                        <option>Lorem Ipsum</option>
+                                        <option>Lorem Ipsum</option>
+                                        <option>Lorem Ipsum</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Location</label>
+                                <div class="col-sm-3">
+                                    <select class="form-control">
+                                        <option>Country</option>
+                                        <option>Lorem Ipsum</option>
+                                        <option>Lorem Ipsum</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3 no-padding">
+                                    <select class="form-control">
+                                        <option>State</option>
+                                        <option>Lorem Ipsum</option>
+                                        <option>Lorem Ipsum</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <select class="form-control">
+                                        <option>City</option>
+                                        <option>Lorem Ipsum</option>
+                                        <option>Lorem Ipsum</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Pincode</label>
+                                <div class="col-sm-10">
+                                    <input type="text" placeholder="Pincode" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group radio-div">
+                                <div class="col-sm-10 col-sm-offset-2">
+                                    <input type="radio" name="option"> <span>Title</span>
+                                    <input type="radio" name="option"> <span>Body</span>
+                                    <input type="radio" name="option"> <span>Tag</span>
+                                </div>
+                            </div>
+                            <div class="form-group radio-div">
+                                <label class="col-sm-2 control-label">Content</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-10 col-sm-offset-2">
+                                    <input type="radio" name="option"> <span style="vertical-align: text-bottom;">With Attachment</span>
+                                </div>
+                            </div>
+                            <div class="action-btns">
+                                <button class="btn" ng-click="showAdvanceSearch = !showAdvanceSearch">Search</button>
+                                <button class="btn">Reset</button>
+                                <button class="btn">Browse</button>
+                                <i class="fa fa-question-circle cursor-pointer"></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 header-right-sec">
+        <!-- Logged Out User icons Starts -->
+        <!-- <ul class="header-right clearfix logged-out-user">
+            <li class="menu-icon">
+                <a href="#">
+                    <span aria-hidden="true" class="glyphicon glyphicon-th"></span>
+                </a>
+            </li>
+            <li class="menu-icon sign-in-li">
+                <a ui-sref="account">
+                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Sign In
+                </a>
+            </li>
+            <li class="menu-icon lang-li">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-globe" aria-hidden="true"></span> English <span class="glyphicon glyphicon-menu-down"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></li>
+        </ul> -->
+        <!-- Logged Out User Icons Ends -->
+        <!-- Logged In User Icons Starts -->
+        <ul class="header-right clearfix">
+            <li class="menu-icon">
+                <a href="#">
+                    <span aria-hidden="true" class="glyphicon glyphicon-th"></span>
+                </a>
+            </li>
+            <li ui-sref="notification.list" class="hover-li">
+                <!-- <a href="" class="icon-alert"> -->
+                <i class="fa fa-newspaper-o alerts">
+                    <span class="count">2</span>
+                </i>
+                <!-- </a> -->
+                <!-- Notifiction Popup div Starts -->
+                <!-- <div class="noti-div notifications-popup for-hover">
+                    <div class="heading">
+                        <h5>Feed 
+                        <a href="" class="pull-right">Settings</a>
+                        <a href="" class="pull-right">Mark All as Read - </a> 
+                        </h5>
+                    </div>
+                    <div class="notifications">
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-chevron-down right-icons"></i>
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Lorem Ipsum</b> is a dummy text and Notification is dummy for now.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-chevron-down right-icons"></i>
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Lorem Ipsum</b> is a dummy text and Notification is dummy for now.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-chevron-down right-icons"></i>
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Lorem Ipsum</b> is a dummy text and Notification is dummy for now.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-chevron-down right-icons"></i>
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Lorem Ipsum</b> is a dummy text and Notification is dummy for now.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-chevron-down right-icons"></i>
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Lorem Ipsum</b> is a dummy text and Notification is dummy for now.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-chevron-down right-icons"></i>
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Lorem Ipsum</b> is a dummy text and Notification is dummy for now.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-chevron-down right-icons"></i>
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Lorem Ipsum</b> is a dummy text and Notification is dummy for now.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-chevron-down right-icons"></i>
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Lorem Ipsum</b> is a dummy text and Notification is dummy for now.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see-all-btn-div text-center">
+                        <a ui-sref="notification.list">See All</a>
+                    </div>
+                </div> -->
+                <!-- Notifiction Popup Div Ends -->
+            </li>
+            <li ui-sref="message.list" class="hover-li">
+                <i class="fa fa-envelope alerts" style="margin-top: 9px;">
+                    <span class="count">2</span>
+                </i>
+                <!-- Message Popup div Starts -->
+                <!-- <div class="noti-div message-popup notifications-popup for-hover">
+                    <div class="heading">
+                        <h5>Messages 
+                        <a href="" class="pull-right">New Message </a> 
+                        <a href="" class="pull-right">Mark All as Read - </a> 
+                        </h5>
+                    </div>
+                    <div class="notifications">
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Bhavesh Vora</b></p>
+                                <p class="text" style="color: #777;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Ankit Jiwani</b></p>
+                                <p class="text" style="color: #777"><i class="fa fa-reply"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Bhavesh Vora</b></p>
+                                <p class="text" style="color: #777;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Ankit Jiwani</b></p>
+                                <p class="text" style="color: #777"><i class="fa fa-reply"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Bhavesh Vora</b></p>
+                                <p class="text" style="color: #777;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Ankit Jiwani</b></p>
+                                <p class="text" style="color: #777"><i class="fa fa-reply"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Bhavesh Vora</b></p>
+                                <p class="text" style="color: #777;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                        <div class="notifications-div">
+                            <div class="image-div">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><b>Ankit Jiwani</b></p>
+                                <p class="text" style="color: #777"><i class="fa fa-reply"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p class="date-time"><i class="fa fa-clock-o"></i> May 24, 2016 at 05:30pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="see-all-btn-div text-center">
+                        <a ui-sref="message">See All</a>
+                    </div>
+                </div> -->
+                <!-- Message Popup Div Ends -->
+            </li>
+            <li ui-sref="contacts.contact" class="hover-li">
+                <i class="fa fa-users alerts" style="margin-top: 8px">
+                    <span class="count">2</span>
+                </i>
+                <!-- Diary Popup div Starts -->
+                <!-- <div class="noti-div message-popup notifications-popup diary-popup for-hover">
+                    <div class="heading">
+                        <h5>Diary 
+                        <a href="" class="pull-right">Settings</a>
+                        <a href="" class="pull-right">Find Contacts - </a>
+                        </h5>
+                    </div>
+                    <div class="notifications request-accept">
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <i class="fa fa-circle-thin right-icons" uib-tooltip="Mark As Read"></i>
+                                <p class="text"><span><b>Bhavesh Vora </b> has been accepted your request.</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heading request-header">
+                        <h5>Contact Requests 
+                        <a href="" class="pull-right">See All</a>
+                        </h5>
+                    </div>
+                    <div class="notifications">
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <p class="text"><span class="request-text"><b>Bhavesh Vora</b> and 6 others have sent you request</span>
+                                    <i class="fa fa-check"></i>
+                                    <i class="fa fa-times"></i>
+                                    <i class="hold" uib-tooltip="Not Now">||</i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heading request-header">
+                        <h5>People you may Know 
+                        <a href="" class="pull-right">See All</a>
+                        </h5>
+                    </div>
+                    <div class="notifications">
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <p class="text"><b>Bhavesh Vora</b></p>
+                                <p class="text" style="color: #777;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications">
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <p class="text"><b>Bhavesh Vora</b></p>
+                                <p class="text" style="color: #777;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notifications">
+                        <div class="notifications-div">
+                            <div class="image-div">
+                                <img src="../../app/images/bhavesh-vora.jpg" class="pull-left">
+                            </div>
+                            <div class="notification-text">
+                                <p class="text"><b>Bhavesh Vora</b></p>
+                                <p class="text" style="color: #777;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heading request-header">
+                        <h5>Add Contacts</h5>
+                    </div>
+                    <div class="social-div text-center">
+                        <a href="">Gmail</a>
+                        <a href="">Yahoo</a>
+                        <a href="">Hotmail</a>
+                        <a href="">Other</a>
+                    </div>
+                </div> -->
+                <!-- Diary Popup Div Ends -->
+            </li>
+            <li class="hover-li">
+                <i class="fa fa-newspaper-o alerts">
+                    <span class="count">2</span>
+                </i>
+            </li>
+            <li class="user-info">
+                <span class="user-profile-pic cursor-pointer" ng-click="showProfile()"></span>
+            </li>
+            <li ng-click="showOtherLinks()" class="cursor-pointer"><span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span></li>
+        </ul>
+        <!-- Logged In User Icons Ends -->
+        <!-- Profile Popup div Starts -->
+        <div class="noti-div profile-popup" ng-show="show_profile">
+            <div class="prof-div">
+                <div class="image-div">
+                    <img src="">
+                </div>
+                <div class="text-div">
+                    <h5>Ankit jiwani</h5>
+                    <p>ankit.jiwani92@gmail.com</p>
+                    <button class="btn btn-primary" ui-sref="myprofile.user">My Account</button>
+                </div>
+            </div>
+            <div class="sign-out">
+                <button class="btn btn-default pull-left">Settings</button>
+                <button class="btn btn-default">Sign out</button>
+            </div>
+        </div>
+        <!-- Profile Popup Div Ends -->
+        <!-- Other Links Popup Div Starts -->
+        <div class="noti-div message-popup notifications-popup other-links" ng-show="show_other_links">
+            <div class="heading">
+                <h5>About</h5>
+            </div>
+            <div class="heading">
+                <h5>Business</h5>
+            </div>
+            <div class="heading">
+                <h5>Advertise</h5>
+            </div>
+            <div class="heading">
+                <h5>Support</h5>
+            </div>
+            <div class="heading">
+                <h5>Privacy</h5>
+            </div>
+            <div class="heading">
+                <h5>Terms</h5>
+            </div>
+        </div>
+        <!-- Other Links Popup Div Ends -->
+    </div>
+</div>
+<div class="row subheader-row">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 width-lg">
+        <ul class="nav nav-tabs main-nav visible-sm">
+            <li class="body-nav">
+                <!-- <button type="button" ng-click="showNav=!showNav" class="btn" data-animation="am-slide-left" data-placement="left" bs-aside="aside" style="padding: 8px 15px;"><span class="fa fa-bars"></span></button> -->
+            </li>
+        </ul>
+    </div>
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 no-padding width-subheader-lg">
+        <ul class="nav nav-tabs main-nav">
+            <li active-state="notification.list" ui-sref="notification.list" class="active"><a>All</a></li>
+            <li active-state="notification.status" ui-sref="notification.status.list" class="active"><a>Status</a></li>
+            <li active-state="notification.article" ui-sref="notification.article.list" class="active"><a>Article</a></li>
+            <li active-state="notification.circular" ui-sref="notification.circular.list" class="active"><a>Circular</a></li>
+            <li active-state="notification.announcement" ui-sref="notification.announcement.list" class="active"><a>Announcement</a></li>
+            <li active-state="notification.call" ui-sref="notification.call.list" class="active"><a>Call</a></li>
+            <li active-state="notification.script" ui-sref="notification.script.list" class="active"><a>Script</a></li>
+            <!-- <li class="body-nav pull-right">
+                <button type="button" class="btn" style="padding: 8px 15px;">
+                    <span class="fa fa-cog"></span>
+                </button>
+            </li> -->
+        </ul>
+    </div>
+</div>
+<div class="row main-wrapper content-row" style="background: #f1f1f1;">
+    <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs width-lg main-sidebar-col">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default left-menu-links" style="margin-top: 5px;">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title"><i class="fa fa-list-alt"></i>  <a role="button" ui-sref="search.home.list">Results</a>
+                        <div class="btn-group pull-right" uib-dropdown>
+                            <i id="result-button" type="button" class="fa fa-ellipsis-v" uib-dropdown-toggle ng-disabled="disabled"></i>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="result-button">
+                                <!-- <li role="menuitem"><a href="">All</a></li>
+                                <li role="menuitem"><a href="">Contacts</a></li>
+                                <li role="menuitem"><a href="">Tracking</a></li>
+                                <li role="menuitem"><a href="">Trackers</a></li>
+                                <li role="menuitem"><a href="">Me</a></li> -->
+                                <li role="menuitem"><a href="">Public</a></li>
+                                <li role="menuitem"><a href="">Me</a></li>
+                                <li role="menuitem"><a href="">Tracking</a></li>
+                            </ul>
+                        </div>
+                    </h4>
+                </div>
+            </div>
+            <div class="panel panel-default left-menu-links active">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title"><i class="fa fa-newspaper-o"></i>  <a role="button" ui-sref="notification.list">Feed</a>
+                        <div class="btn-group pull-right" uib-dropdown>
+                            <i id="feed-button" type="button" class="fa fa-ellipsis-v" uib-dropdown-toggle ng-disabled="disabled"></i>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="feed-button">
+                                <li role="menuitem"><a href="">Public</a></li>
+                                <li role="menuitem"><a href="">Me</a></li>
+                                <li role="menuitem"><a href="">Tracking</a></li>
+                            </ul>
+                        </div>
+                    </h4>
+                </div>
+            </div>
+            <div class="panel panel-default left-menu-links">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title"><i class="fa fa-envelope"></i>  <a role="button" ui-sref="message.list">Messages</a>
+                        <div class="btn-group pull-right" uib-dropdown>
+                            <i id="message-button" type="button" class="fa fa-ellipsis-v" uib-dropdown-toggle ng-disabled="disabled"></i>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="message-button">
+                                <li role="menuitem"><a href="">Public</a></li>
+                                <li role="menuitem"><a href="">Me</a></li>
+                                <li role="menuitem"><a href="">Tracking</a></li>
+                            </ul>
+                        </div>
+                    </h4>
+                </div>
+            </div>
+            <div class="panel panel-default left-menu-links">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title"><i class="fa fa-users"></i>  <a role="button" ui-sref="contacts.contact">Diary</a>
+                        <div class="btn-group pull-right" uib-dropdown>
+                            <i id="diary-button" type="button" class="fa fa-ellipsis-v" uib-dropdown-toggle ng-disabled="disabled"></i>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="diary-button">
+                                <li role="menuitem"><a href="" ui-sref="contacts.contact">Contacts</a></li>
+                                <li role="menuitem"><a href="">Requests</a></li>
+                                <li role="menuitem"><a href="" ui-sref="contacts.list">List</a></li>
+                                <li role="menuitem"><a href="" ui-sref="contacts.groups">Groups</a></li>
+                            </ul>
+                        </div>
+                    </h4>
+                </div>
+            </div>
+            <div class="panel panel-default left-menu-links">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title"><i class="fa fa-newspaper-o"></i>  <a role="button" ui-sref="notification.list">Campaign</a>
+                        <div class="btn-group pull-right" uib-dropdown>
+                            <i id="campaign-button" type="button" class="fa fa-ellipsis-v" uib-dropdown-toggle ng-disabled="disabled"></i>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="campaign-button">
+                                <li role="menuitem"><a href="">Public</a></li>
+                                <li role="menuitem"><a href="">Me</a></li>
+                                <li role="menuitem"><a href="">Tracking</a></li>
+                            </ul>
+                        </div>
+                    </h4>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title" ng-click="sidebarAccor4 = !sidebarAccor4"><a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">Pockets</a><i class="fa fa-minus" ng-show="sidebarAccor4"></i><i class="fa fa-plus" ng-show="!sidebarAccor4"></i></h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" ng-class="{'in': sidebarAccor4}">
+                    <div class="panel-body">
+                        <p><a href="">Option 1</a></p>
+                        <p><a href="">Option 2</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title" ng-click="sidebarAccor6 = !sidebarAccor6"><a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">History</a><i class="fa fa-minus" ng-show="sidebarAccor6"></i><i class="fa fa-plus" ng-show="!sidebarAccor6"></i></h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" ng-class="{'in': sidebarAccor6}">
+                    <div class="panel-body">
+                        <p><a href="">Option 1</a></p>
+                        <p><a href="">Option 2</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title" ng-click="sidebarAccor7 = !sidebarAccor7"><a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">Notifications</a><i class="fa fa-minus" ng-show="sidebarAccor7"></i><i class="fa fa-plus" ng-show="!sidebarAccor7"></i></h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" ng-class="{'in': sidebarAccor7}">
+                    <div class="panel-body">
+                        <p><a href="">Option 1</a></p>
+                        <p><a href="">Option 2</a></p>
+                    </div>
+                </div>
+            </div> -->
+            <div class="panel panel-default reach-filter">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title" ng-click="sidebarAccor8 = !sidebarAccor8"><a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">Reach</a><i class="fa fa-minus" ng-show="sidebarAccor8"></i><i class="fa fa-plus" ng-show="!sidebarAccor8"></i></h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" ng-class="{'in': sidebarAccor8}">
+                    <div class="panel-body">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Area
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> City
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> State
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Regional
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> National
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default review-filter">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title" ng-click="sidebarAccor9 = !sidebarAccor9"><a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">Review</a><i class="fa fa-minus" ng-show="sidebarAccor9"></i><i class="fa fa-plus" ng-show="!sidebarAccor9"></i></h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" ng-class="{'in': sidebarAccor9}">
+                    <div class="panel-body">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default sidebar-links left-menu-links" style="margin-top: 5px;">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title">
+                        <a href="" uib-tooltip="Notification"><i class="fa fa-flag"></i></a> &nbsp;
+                        <a href="" uib-tooltip="History"><i class="fa fa-history"></i></a> &nbsp;
+                        <a href="" uib-tooltip="Settings"><i class="fa fa-cog"></i></a>
+                    </h4>
+                </div>
+            </div>
+            <!-- <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title" ng-click="sidebarAccor5 = !sidebarAccor5"><a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="collapseOne">Settings</a><i class="fa fa-minus" ng-show="sidebarAccor5"></i><i class="fa fa-plus" ng-show="!sidebarAccor5"></i></h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" ng-class="{'in': sidebarAccor5}">
+                    <div class="panel-body">
+                        <p><a href="">Option 1</a></p>
+                        <p><a href="">Option 2</a></p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 width-lg-content no-padding">
+        <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-btns">
+            <button class="btn"><i class="fa fa-pencil-square-o"></i>&nbsp; Post</button>
+            <button class="btn"><i class="fa fa-plus-square-o"></i>&nbsp; Add</button>
+            <button class="btn"><i class="fa fa-upload"></i>&nbsp; Upload</button>
+            <button class="btn"><i class="fa fa-cloud-download"></i>&nbsp; Import</button>
+        </div> -->
+        <ui-view></ui-view>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs main-right-sidebar" style="padding-left: 0;">
+        <div class="col-lg-12 col-md-12 col-sm-12 search-list-col">
+            <h4>Last 5 Search</h4>
+            <div class="search-list-div">
+                <p class="col-lg-9 col-md-8 col-sm-6 col-xs-12 no-padding">Lorem Ipsum is dummy text. Lorem Ipsum is lorem.</p>
+                <span class="col-lg-3 col-md-4 col-sm-6 col-xs-12 no-padding text-right">10 mins ago</span>
+            </div>
+            <div class="search-list-div">
+                <p class="col-lg-9 col-md-8 col-sm-6 col-xs-12 no-padding">Lorem Ipsum is dummy text. Lorem Ipsum is lorem.</p>
+                <span class="col-lg-3 col-md-4 col-sm-6 col-xs-12 no-padding text-right">10 mins ago</span>
+            </div>
+            <div class="search-list-div">
+                <p class="col-lg-9 col-md-8 col-sm-6 col-xs-12 no-padding">Lorem Ipsum is dummy text. Lorem Ipsum is lorem.</p>
+                <span class="col-lg-3 col-md-4 col-sm-6 col-xs-12 no-padding text-right">10 mins ago</span>
+            </div>
+            <div class="search-list-div">
+                <p class="col-lg-9 col-md-8 col-sm-6 col-xs-12 no-padding">Lorem Ipsum is dummy text. Lorem Ipsum is lorem.</p>
+                <span class="col-lg-3 col-md-4 col-sm-6 col-xs-12 no-padding text-right">10 mins ago</span>
+            </div>
+            <div class="search-list-div">
+                <p class="col-lg-9 col-md-8 col-sm-6 col-xs-12 no-padding">Lorem Ipsum is dummy text. Lorem Ipsum is lorem.</p>
+                <span class="col-lg-3 col-md-4 col-sm-6 col-xs-12 no-padding text-right">10 mins ago</span>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 trending-pockets">
+            <h4>Trending Pockets</h4>
+        </div>
+    </div>
+</div>

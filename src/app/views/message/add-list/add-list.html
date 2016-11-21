@@ -1,0 +1,92 @@
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 main-sidebar-col message-sidebar" style="padding: 9px 0; border: 1px solid #ddd;">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-home-col no-border" style="padding: 0;">
+        <ul class="nav nav-tabs main-nav" role="tablist" ng-init="innerTab = 1">
+            <li role="presentation" ng-class="{'active': innerTab == 1}"><a href="" ng-click="innerTab = 1" aria-controls="home" role="tab" data-toggle="tab">Contact</a>
+            </li>
+            <li role="presentation" ng-class="{'active': innerTab == 2}"><a href="" ng-click="innerTab = 2" aria-controls="profile" role="tab" data-toggle="tab">Tracker</a>
+            </li>
+            <li role="presentation" ng-class="{'active': innerTab == 3}"><a href="" ng-click="innerTab = 3" aria-controls="messages" role="tab" data-toggle="tab">Tracking</a>
+            </li>
+        </ul>
+        <div class="tab-content col-lg-12 col-md-12 col-sm-12 col-xs-12 slider-col no-padding add-group-col">
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 1}">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding step-1" ng-show="show_step_1">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-col">
+                        <input type="text" placeholder="Search" class="form-control">
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-col">
+                        <input type="text" placeholder="List Name" class="form-control">
+                        <i class="fa fa-long-arrow-left"></i>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding all-contact-col add-contact-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-col">
+                            <div class="contact-image pull-left">
+                                <img src="../app/images/bhavesh-vora.jpg">
+                            </div>
+                            <div class="contact-name">
+                                <h5> Bhavesh Vora </h5>
+                                <p>Last seen 1 hour ago <i class="fa fa-circle pull-right"></i></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contacts-col">
+                            <div class="contact-image pull-left">
+                                <img src="../app/images/bhavesh-vora.jpg">
+                            </div>
+                            <div class="contact-name">
+                                <h5> Bhavesh Vora </h5>
+                                <p>Last seen 1 hour ago <i class="fa fa-circle pull-right"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-btns" style="padding: 8px 10px 0; border: 0; margin-bottom: 0; border-top: 1px solid #e9e9e9;">
+                        <button class="btn" ng-click="nextStep1()">Next</button>
+                        <button class="btn">Back</button>
+                        <button class="btn">Cancel</button>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding step-2" ng-show="show_step_2">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-image-div">
+                        <div class="image-div"></div>
+                        <div class="select-btn"><button>Select Image</button></div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-btns" style="padding: 8px 10px 0; border: 0; margin-bottom: 0; border-top: 1px solid #e9e9e9;">
+                        <button class="btn" ng-click="nextStep2()">Next</button>
+                        <button class="btn" ng-click="nextStep3()">Back</button>
+                        <button class="btn">Cancel</button>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding step-3" ng-show="show_step_3">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 msg-col">
+                        <textarea placeholder="Type here introdusing message..." class="form-control"></textarea>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 action-btns" style="padding: 8px 10px 0; border: 0; margin-bottom: 0; border-top: 1px solid #e9e9e9;">
+                        <button class="btn" ng-click="nextStep3()">Next</button>
+                        <button class="btn" ng-click="nextStep1()">Back</button>
+                        <button class="btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 2}">
+                <h2>hello</h2>
+            </div>
+            <div role="tabpanel" class="tab-pane fade in col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-tab" ng-class="{'active': innerTab == 3}">
+                <h3>hey</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    function setHeight() {
+        windowHeight = $(window).innerHeight();
+        $('.message-body-col').css('height', windowHeight - 142);
+        $('.all-contact-col').css('height', windowHeight - 241);
+        $('.messages-col').css('height', windowHeight - 347);
+        $('.add-contact-col').css('height', windowHeight - 322);
+    };
+    setHeight();
+    $(window).resize(function() {
+        setHeight();
+    });
+});
+</script>

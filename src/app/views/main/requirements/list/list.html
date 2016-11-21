@@ -1,0 +1,250 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-products-col no-padding">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding search-found">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 action-btns no-border no-padding no-margin">
+            <button class="btn" ng-click="isCollapsed = !isCollapsed">Post</button>
+            <!-- <button class="btn" ng-click="isBid = !isBid">Bid</button> -->
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right" style="padding: 6px 15px 0;">
+            <!-- <a href="" ng-click="showAdvanceSearch = !showAdvanceSearch">Search Advance?</a> &nbsp; -->
+            <a href="">Browse Catalog?</a> &nbsp;
+            <a href="" class="list-grid-btn list-btn" ng-class="{'active': show_list_view}" ng-click="listView()"><i class="fa fa-list"></i></a><a href="" class="list-grid-btn grid-btn" ng-class="{'active': !show_list_view}" ng-click="gridView()"><i class="fa fa-th"></i></a>
+        </div>
+    </div>
+</div>
+<!-- Post your requirements div -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 result-share-box share-box-col" uib-collapse="!isCollapsed">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding share-div">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading action-btns">
+            <span>Share</span>
+            <select class="btn">
+                <option>Requirements</option>
+                <option>Products</option>
+                <option>Services</option>
+                <option>Resources</option>
+                <option>Events</option>
+                <option>Jobs</option>
+                <option>Apps</option>
+            </select>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 share-text-col">
+            <!-- <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control"></textarea> -->
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 no-padding">
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+                    <label class="col-sm-2 control-label">Title</label>
+                    <div class="col-sm-10 input-col">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding" style="padding-right: 15px;">
+                    <label class="col-sm-2 control-label">Description</label>
+                    <div class="col-sm-10 input-col">
+                        <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 no-padding">
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                    <label class="col-sm-2 control-label">Category</label>
+                    <div class="col-sm-10 input-col">
+                        <select class="form-control">
+                            <option>Category</option>
+                            <option>Lorem Ipsum</option>
+                            <option>Lorem Ipsum</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                    <label class="col-sm-2 control-label">Sub Category</label>
+                    <div class="col-sm-10 input-col">
+                        <select class="form-control">
+                            <option>Sub Category</option>
+                            <option>Lorem Ipsum</option>
+                            <option>Lorem Ipsum</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                    <label class="col-sm-2 control-label">Status</label>
+                    <div class="col-sm-10 input-col">
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 attachment-col">
+            <i class="fa fa-file" data-toggle="tooltip" data-placement="top" title="Add File"></i> &nbsp;
+            <i class="fa fa-camera" data-toggle="tooltip" data-placement="top" title="Add Photo"></i> &nbsp;
+            <i class="fa fa-map-marker" data-toggle="tooltip" data-placement="top" title="Add Location"></i> &nbsp;
+            <i class="fa fa-link" data-toggle="tooltip" data-placement="top" title="Add Link"></i> &nbsp;
+            <i class="fa fa-calendar" data-toggle="tooltip" data-placement="top" title="Select Date"></i>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 action-btns bottom-action">
+            <select class="btn">
+                <option>Public</option>
+                <option>Private</option>
+            </select>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right action-btns bottom-action">
+            <button class="btn">Preview</button>
+            <select class="btn">
+                <option>Publish</option>
+                <option>Private</option>
+            </select>
+        </div>
+    </div>
+</div>
+<!-- Post your requirements div -->
+<!-- Bid card and list view -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding bid-col">
+    <!-- Grid View -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section" ng-show="!show_list_view">
+        <!-- all -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 cursor-pointer item-card-col no-bottom-margin">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                <i class="fa fa-chevron-down down-arrow"></i>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                    <div class="name-div">
+                        <p class="by">by - <a>HDFC Mutual Fund </a></p>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                    <img src="../app/images/no-image.png" class="full-width" ng-show="default_image">
+                    <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                        <input type="text" class="form-control" placeholder="Value" style="width:50%; display: inline-block;">
+                        <input type="text" class="form-control" placeholder="TAT" style="width:48%; display: inline-block;">
+                        <input type="text" class="form-control" placeholder="Instructions" style="width:50%; display: inline-block;">
+                        <input type="text" class="form-control" placeholder="Disclosures" style="width:48%; display: inline-block;">
+                        <!-- <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea> -->
+                        <button class="btn btn-default">Submit</button>
+                        <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item-name">
+                    <h4 ui-sref="search.home.detail">HDFC Super Equity Fund</h4>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                    <p style="-webkit-line-clamp: 3;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding counts">
+                        <p style="text-align: left; margin: 0;">Time Remained</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding seals text-right">
+                        <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding location">
+                        <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 no-padding counts">
+                        <p>
+                            <i class="fa fa-eye"></i> 265 &nbsp;
+                            <i class="fa fa-map-marker"></i> 265
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item-action">
+                    <div class="action-btns">
+                        <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                        <button class="btn" ng-click="enquire()">Bid</button>
+                        <button class="btn">Message</button>
+                        <div class="btn-group" uib-dropdown>
+                            <button id="pocket-button" type="button" class="btn" uib-dropdown-toggle ng-disabled="disabled">Pocket</button>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="pocket-button">
+                                <li role="menuitem"><a href="">Link 1</a></li>
+                                <li role="menuitem"><a href="">Link 2</a></li>
+                                <li role="menuitem"><a href="">Link 3</a></li>
+                                <li class="divider"></li>
+                                <li role="menuitem" class="add-pocket-li"><a href="">Add a Pocket</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 refer-div">
+                    <span>Review:</span>
+                    <span class="pull-right"><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i></span>
+                    <input type="text" class="form-control">
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- List View -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 product-card-section list-view-section" ng-show="show_list_view">
+        <!-- All -->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cursor-pointer item-card-col no-bottom-margin">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding inner-div">
+                <!-- <i class="fa fa-chevron-down down-arrow"></i> -->
+                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+                        <div class="name-div">
+                            <p class="by">by - <a>HDFC Mutual Fund </a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center cover-col" style="overflow: hidden;">
+                        <img src="../app/images/no-image.png" class="full-width" ng-show="default_image">
+                        <img src="../app/images/sample-map.jpg" class="full-width" ng-show="show_map">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center" ng-show="show_enquire_form" style="padding: 0; margin: 0; height: auto;">
+                            <input type="text" class="form-control" placeholder="Value" style="width:50%; display: inline-block;">
+                            <input type="text" class="form-control" placeholder="TAT" style="width:48%; display: inline-block;">
+                            <input type="text" class="form-control" placeholder="Instructions" style="width:50%; display: inline-block;">
+                            <input type="text" class="form-control" placeholder="Disclosures" style="width:48%; display: inline-block;">
+                            <!-- <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Message" style="margin-bottom: 10px;"></textarea> -->
+                            <button class="btn btn-default">Submit</button>
+                            <button class="btn btn-default" ng-click="enquire()">Cancel</button>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding text-center" ng-show="show_review_form" style="padding: 0; margin: 0; height: auto;">
+                            <textarea ui-tinymce="{}" ng-model="tinymceModel" class="form-control" placeholder="Review" style="margin-bottom: 10px;"></textarea>
+                            <button class="btn btn-default">Submit</button>
+                            <button class="btn btn-default" ng-click="review()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding item-name">
+                        <h4 ui-sref="search.home.detail">HDFC Super Equity Fund</h4>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 description">
+                        <p style="-webkit-line-clamp: 3;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse illum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding counts text-left">
+                        <p style="text-align: left;">Time Remained</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding seals text-right">
+                        <p><a href="">Verified</a> &nbsp; <a href="">Trusted</a></p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding location">
+                        <p ng-click="map()"><i class="fa fa-map-marker"></i> &nbsp; 4.7 Kms away</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 no-padding counts text-right">
+                        <p>
+                            <i class="fa fa-eye"></i> 265 &nbsp;
+                            <i class="fa fa-map-marker"></i> 265
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding action-col">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 item-action">
+                            <div class="action-btns">
+                                <button class="btn" ng-click="track()"><span ng-show="!trackbtn">Track</span> <span ng-show="trackbtn">Untrack</span></button>
+                                <button class="btn" ng-click="enquire()">Bid</button>
+                                <button class="btn">Message</button>
+                                <div class="btn-group" uib-dropdown>
+                                    <button id="pocket-button" type="button" class="btn" uib-dropdown-toggle ng-disabled="disabled">Pocket</button>
+                                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="pocket-button">
+                                        <li role="menuitem"><a href="">Link 1</a></li>
+                                        <li role="menuitem"><a href="">Link 2</a></li>
+                                        <li role="menuitem"><a href="">Link 3</a></li>
+                                        <li class="divider"></li>
+                                        <li role="menuitem" class="add-pocket-li"><a href="">Add a Pocket</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bid card and list view -->

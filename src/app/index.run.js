@@ -3,12 +3,35 @@
 
   angular
     .module('findoo')
-    .run(runBlock);
+    .run(runConf);
 
-  /** @ngInject */
-  function runBlock($log) {
+  function runConf($rootScope, AuthFactory, $location) {
+      $rootScope.loggedIn = false;
 
-    $log.debug('runBlock end');
+      if(AuthFactory.isAuthenticated()) {
+          $rootScope.loggedIn = true;
+          $rootScope.userInfo = AuthFactory.getUserInfo();
+      }
+
+      $rootScope.logOut = function() {
+          AuthFactory.logout();
+          $rootScope.loggedIn = false;
+          $rootScope.userInfo = '';
+          $location.path('/account');
+      };
+
+      $rootScope.$on('login:Successful', function () {
+          $rootScope.loggedIn = AuthFactory.isAuthenticated();
+          $rootScope.userInfo = AuthFactory.getUserInfo();
+          $location.path('/search/profiles/list');
+
+      });
+
+      $rootScope.$on('registration:Successful', function () {
+          $rootScope.loggedIn = AuthFactory.isAuthenticated();
+          $rootScope.userInfo = AuthFactory.getUserInfo();
+          $location.path('/search/profiles/list');
+      });
   }
 
 })();

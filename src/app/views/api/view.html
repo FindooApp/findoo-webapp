@@ -1,0 +1,66 @@
+<div class="row">
+    <!-- Login and sigup Section Starts -->
+    <div class="col-lg-offset-3 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="text-center account-window">
+            <h1 class="logo" ui-sref="home"><span>Findoo</span></h1>
+            <h2>API List</h2>
+            <p>Now, experience social approach in finance! You are signing in to Search</p>
+            <a ui-sref="api_register">Generate new API key</a>
+            <div class="tab-section">
+                <!-- Tab panes -->
+                <div class="tab-content clearfix">
+                    <div role="tabpanel" class="tab-pane register active" id="register">
+                        <div ng-if="code" ng-bind-html="code" class="well"></div>
+                        <table class="table table-bordered table-hover">
+                            <tr>
+                                <th>App Name</th>
+                                <th>API Key</th>
+                                <th>Site URL</th>
+                                <th>Code</th>
+                            </tr>
+                            <tr ng-repeat="result in results">
+                                <td ng-bind="result.app_name"></td>
+                                <td ng-bind="result.api_key"></td>
+                                <td ng-bind="result.site_url"></td>
+                                <td><button class="btn btn-info" ng-click="showCode(result.api_key)">Get Code</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer navbar-fixed-bottom">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding">
+            <ul class="nav nav-pills">
+                <li role="presentation"><a href="#">About</a></li>
+                <li role="presentation"><a href="#">Business</a></li>
+                <li role="presentation"><a href="#">Advertise</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center copy no-padding">
+            <span>&copy; 2015 Findoo</span>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding">
+            <ul class="nav nav-pills nav-right">
+                <li role="presentation"><a href="#">Support</a></li>
+                <li role="presentation"><a href="#">Privacy</a></li>
+                <li role="presentation"><a href="#">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Footer Section Ends -->
+</div>
+<!-- Window height -->
+<script>
+$(document).ready(function() {
+    function setHeight() {
+        windowHeight = $(window).innerHeight();
+        $('.account-row').css('min-height', windowHeight);
+    };
+    setHeight();
+    $(window).resize(function() {
+        setHeight();
+    });
+});
+</script>

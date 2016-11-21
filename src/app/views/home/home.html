@@ -1,5 +1,136 @@
-<div class="text-center">
-  <h2>Findoo</h2>
-  <input type="text"/>
-  <button class="btn btn-primary" ui-sref="search.apps.list">Search</button>
+<div class="home-row row">
+	<!--top navigation -->
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-2 menu-left">
+	  	<span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+  	</div>
+
+  	<div class="col-lg-8 col-md- 8 col-sm-8 col-xs-10 menu-right">
+  		<a ng-if="!loggedIn" ui-sref="account"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Sign In |</a>
+		<a href="#" ng-if="loggedIn" ng-click="logOut()"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Sign Out |</a>
+		<!-- <a href="#"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> My Account</a> |  -->
+	  	<div class="btn-group">
+		  	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-globe" aria-hidden="true"></span> English <span class="glyphicon glyphicon-menu-down"></span>
+		  	</button>
+		  	<ul class="dropdown-menu">
+				<li><a href="#">Action</a></li>
+				<li><a href="#">Another action</a></li>
+				<li><a href="#">Something else here</a></li>
+				<li role="separator" class="divider"></li>
+				<li><a href="#">Separated link</a></li>
+		  	</ul>
+	  	</div>
+  	</div>
+  	<!--top navigation end-->
+  	<!-- Search Section -->
+  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		<div class="text-center search-window">
+		  	<!-- <h1 class="logo"><span>Findoo</span></h1> -->
+		  	<img src="../app/images/logo.png" class="margin-bottom-15">
+		  	<div class="input-group search-section">
+				<div class="input-group-btn" dropdown is-open="isopen">
+					<select class="btn btn-default dropdown-toggle" ng-model="$parent.path">
+						<option ng-selected="true" value="search.profiles.list">All</option>
+						<option value="search.profiles.list">Profiles</option>
+						<option value="search.products.list">Products</option>
+						<option value="search.services.list">Services</option>
+						<option value="search.posts.list">Posts</option>
+						<option value="search.resources.list">Resources</option>
+						<option value="search.events.list">Events</option>
+						<option value="search.jobs.list">Jobs</option>
+						<option value="search.apps.list">Apps</option>
+					</select>
+			  	</div>
+			  	<md-autocomplete
+					md-selected-item="keyword"
+					md-search-text="searchText"
+					md-selected-item-change="selectedItemChange(list)"
+					md-items="list in querySearch(searchText)"
+					md-item-text="list"
+					md-min-length="0"
+					placeholder="Type here...">
+
+					<md-item-template>
+						<span md-highlight-text="searchText" md-highlight-flags="^i">{{list}}</span>
+					</md-item-template>
+					<md-not-found>No results found</md-not-found>
+
+				</md-autocomplete>
+			  	<!-- <input type="text" class="form-control" ng-model="keyword" name="keyword" aria-label="..." placeholder="Type here..." autofocus /> -->
+			  	<a class="input-group-btn go" ng-click="doSearch()">
+					<button class="btn btn-primary" id="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+			  	</a>
+		  	</div><!-- /input-group -->
+		</div>
+	</div>
+
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 home-column">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+			<!-- <span class="profile-icon box"></span> -->
+			<img src="../app/images/profile-icon.png">
+			<h3>List Your Profile</h3>
+			<p>Create and manage multiple profiles related to single account and swap it under hood to use as you like</p>
+			<a ui-sref="account">Read More</a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+			<!-- <span class="network-icon box"></span> -->
+			<img src="../app/images/network-icon.png">
+			<h3>Claim Your Listing</h3>
+			<p>Create and manage your community. You may organize and map them to the last mile if you wish</p>
+			<a ui-sref="account">Read More</a>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+			<!-- <span class="post-icon box"></span> -->
+			<img src="../app/images/post-icon.png">
+			<h3>Post Your Requirements</h3>
+			<p>Publish your post to desired privacy level and stay informed of the response through notifications and analytics</p>
+			<a href="#">Read More</a>
+		</div>
+	</div>
+	<!--Search Section end-->
+	<!--footer Section -->
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer navbar-fixed-bottom">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding">
+			<ul class="nav nav-pills">
+				<li role="presentation"><a href="#">About</a></li>
+				<li role="presentation"><a href="#">Business</a></li>
+				<li role="presentation"><a href="#">Advertise</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center copy no-padding">
+			<span>&copy; 2015 Findoo</span>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 no-padding">
+			<ul class="nav nav-pills nav-right">
+				<li role="presentation"><a href="#">Support</a></li>
+				<li role="presentation"><a href="#">Privacy</a></li>
+				<li role="presentation"><a href="#">Terms</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Footer Section Ends -->
 </div>
+
+<!--Search Section -->
+<!-- <div class="row">
+</div> -->
+
+
+
+
+<!--Search Section End-->
+
+
+<!-- Window height -->
+    <script>
+        $(document).ready(function() {
+            function setHeight() {
+                windowHeight = $(window).innerHeight();
+                $('.home-row').css('min-height', windowHeight);
+            };
+            setHeight();
+            $(window).resize(function() {
+                setHeight();
+            });
+        });
+    </script>
