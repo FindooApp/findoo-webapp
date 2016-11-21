@@ -9,11 +9,20 @@
     "jquery": "~2.1.4",
     "angular-ui-router": "~0.2.15",
     "bootstrap-sass": "~3.3.5",
-    "angular-bootstrap": "~0.13.4",
+    "angular-bootstrap": "~2.2.0",
     "angular-toastr": "~1.5.0",
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
-    "angular": "~1.4.2"
+    "angular": "~1.4.2",
+    "font-awesome": "~4.5.0",
+    "angular-resource": "^1.5.8",
+    "angular-recaptcha": "^3.0.4",
+    "angular-chart.js": "^1.0.3",
+    "angular-daterangepicker": "^0.2.2",
+    "ng-repeat-owl-carousel": "*",
+    "owl.carousel": "^2.2.0",
+    "angular-material": "^1.1.1",
+    "angular-ui-tinymce": "^0.0.17"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"
@@ -22,11 +31,11 @@
     "bootstrap-sass": {
       "main": [
         "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
-        "assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
-        "assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
-        "assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
-        "assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+        "../font-awesome/fonts/fontawesome-webfont.eot",
+        "../font-awesome/fonts/fontawesome-webfont.svg",
+        "../font-awesome/fonts/fontawesome-webfont.ttf",
+        "../font-awesome/fonts/fontawesome-webfont.woff",
+        "../font-awesome/fonts/fontawesome-webfont.woff2"
       ]
     }
   },
